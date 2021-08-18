@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="css/image/logoSemMenu.png" type="image/x-icon">
+    <title>ASKR -CoffeBar</title>
+</head>
+<body>
+    <div id="zero"></div>
+    <div class="principal">
+        <div class="col-ghost">a</div>
+        <div class="col-menu">
+            <div id="logoMenuLateral">
+                <img src="css/image/logoSemMenu.png" alt="">
+            </div>
+            <div id="colunaMenu">
+                <div class="menu">
+                    <a href="#capa"> INICIO</a>
+                </div>
+                <div class="menu">
+                    <a href="#cardapio">CARDAPIO</a>
+                </div>
+                <div class="menu">
+                    <a href="#quem-somos">QUEM SOMOS</a>
+                </div>
+                <div class="menu">
+                    <a href="#ondeEstamos">ONDE ESTAMOS</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-corpo">
+            <div id="capa">
+                <div class="icone-capa">
+                    <img src="./css/image/logoSemMenu.png" alt="">
+                </div>
+                <div class="logo-nome logo-letters">
+                    <div class="bordaLateralInicio">
+                        <div class="tituloEmpresa"> ASKR </div>
+                        <div class="subtituloEmpresa"> Coffeebar</div>
+                    </div>
+                </div>
+            </div>
+            <div id="quem-somos">
+                <div class="titulo">
+                    QUEM SOMOS
+                </div>
+                <div id="quem-somos-corpo">
+                    <div id="fotoEsquerdaQuemSomos">
+                        <img src="css/image/hornDRINK.jpg" alt="">
+                    </div>
+                    <div id="textoQuemSomos">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos odio molestiae porro praesentium, corrupti nulla numquam itaque? Eveniet, cupiditate illo adipisci accusantium voluptate hic ratione id quia impedit commodi quis.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error dolore maiores ad voluptas consectetur laborum dicta, molestias aut reiciendis perferendis. Ipsam laudantium esse, amet incidunt quia debitis sapiente magnam sit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam facilis, culpa consequuntur fugiat dignissimos error voluptatem iusto reiciendis recusandae quas similique vero nobis ullam mollitia expedita voluptas officiis autem.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vel placeat consectetur numquam, qui labore! Magni fugit fuga nemo deleniti, obcaecati iure reprehenderit adipisci eligendi nesciunt ratione eveniet impedit tempora?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere sapiente, facilis exercitationem vel veniam necessitatibus corporis, fugiat excepturi rem, minima voluptates? Dolorum doloremque, cumque placeat repellendus sint fugiat nobis.
+                    
+                    </div>
+                    <div id="fotoDireitaQuemSomos">
+                        <img src="css/image/viking-drinking-mug.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="ondeEstamos">
+                <div class="titulo">
+                    ONDE ESTAMOS
+                </div>
+                <div id="onde-estamos-corpo">
+                    <div id="endereco">
+                        <div class="endereco">
+                            R. PROF. ASSIS GONÇALVES, <br>
+                             1506 - ÁGUA VERDE, <br>
+                             CURITIBA - PR, 80620-250
+                        </div>
+                    </div>
+                    <div id="foto-mapa">
+                        <div id="mapa">
+                            <img src="css/image/ONDEESTAMOS.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cardapio">
+                <div class="titulo-botao">
+                    <div class="titulo">
+                        CARDAPIO
+                    </div>
+                    <div class="botao-comanda">
+                    </div>
+                </div>
+                <div class="legenda">
+                    FAÇA SEU PEDIDO SEM SAIR DA MESA, EXCLUSIVO PARA CLIENTES NO RESTAURANTE
+                </div>         
+                <div id="menu">
+                    <div class="prato">
+                        a
+                    </div>
+                    <div class="prato">
+                        b
+                    </div>
+                    <div class="prato">
+                        c
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/app.js">
+    let progress = document.getElementById('zero');
+
+    let height = document.body.scrollHeight - window.innerHeight;
+    console.log(height);
+    window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / height) *100;
+        progress.style.height = progressHeight + "%";
+    }
+    </script>
+</body>
+</html>
