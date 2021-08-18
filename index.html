@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="css/image/logoSemMenu.png" type="image/x-icon">
+    
     <title>ASKR -CoffeBar</title>
 </head>
 <body>
-    <div id="zero"></div>
+    <button id="pause">
+        a
+    </button>
+    <div>
+        <i class="fas fa-car"></i>
+        <!-- <i class="fas fa-pause" style="font-size:48px;color: red;"></i>  -->
+    </div>
+    <embed src="Musica/🎵 Drums of Drakkar vikings music No Copyright Music 🎧_160k.mp3" autostart="false" loop="true" width="0px" height="0px" volume="10%">    
     <div class="principal">
         <div class="col-ghost">a</div>
         <div class="col-menu">
@@ -108,15 +117,6 @@
             </div>
         </div>
     </div>
-    <script src="./JS/app.js">
-    let progress = document.getElementById('zero');
-
-    let height = document.body.scrollHeight - window.innerHeight;
-    console.log(height);
-    window.onscroll = function(){
-        let progressHeight = (window.pageYOffset / height) *100;
-        progress.style.height = progressHeight + "%";
-    }
-    </script>
+    <script src="./JS/app.js"></script>
 </body>
 </html>

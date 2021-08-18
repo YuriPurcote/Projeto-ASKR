@@ -147,6 +147,7 @@ a{
     width: 11%;
 }
 #fotoEsquerdaQuemSomos>img{
+    margin-top: 10vh;
     border: 5px solid #a29484;
     width: 100%;
 }
@@ -176,7 +177,7 @@ a{
     margin-left: 10%;
 }
 .endereco{
-    margin-top: 30%;
+    margin-top: 50%;
     margin-right: 10vw;
     color: #3e2400;
     font-size:5vh;
@@ -184,6 +185,8 @@ a{
     font-family: 'ASKR';
 }
 #mapa{
+    margin-top: 10%;
+    margin-right: 5vh;
     width: 100%;
     height: 100%;
 }
@@ -236,6 +239,7 @@ a{
     background: #1C1000 ;
     width: 0.5vh;
     margin-right: 10vh;
+    height: 100vh;
 }
 ::-webkit-scrollbar-thumb{
     background-color: #DDD ;
