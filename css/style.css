@@ -16,18 +16,21 @@
     display: flex;
 }
 .col-ghost{
+    z-index: 1;
     height:400.4vh;
     background-color:#3e2400 ;
     width: 10vh;
     flex: 0.06;
 }
 .col-menu{
+    z-index: 1;
     height:100vh;
     width: 5%;
     background-color:#3e2400 ;
     flex: 0.7;
     transition: 0.5s;
     position: fixed;
+
 }
 .col-menu:hover{
     height:100vh;
@@ -42,8 +45,7 @@
 #capa{
     display: flex;
     padding: 0.1%;
-
-    background: #1C1000;
+    background-color: #1C1000;
     height: 100vh;
 }
 #quem-somos{
@@ -63,6 +65,8 @@
     font-family: 'ASKR';
     font-size: 20vh;
     line-height: 80%;
+    margin-left: 25%;
+
 }
 .legenda{
     font-family: 'ASKR';
@@ -76,7 +80,7 @@
     font-size: 5vh;
     padding-left: 10vh;
 }
-/* estrutura ate aqui, nao mexer */
+/* estrutura ate aqui */
 #logoMenuLateral>img{
     margin: 10%;
     width: 80%;
@@ -90,18 +94,32 @@
     text-align: center;
     margin-top: 3%;
     background-color:#6c5435;
-    transition: 0.5s;
+    transition: 0.9s;
+
     font-family: 'ASKR' ;
     font-size: 2vh;
     width: 105%;
     height: 3vh;
     padding-top: 5%;
+    
+}
+@keyframes ponta {
+    from {
+        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+         
+    }
+    to{
+        clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+
+    }
+    
 }
 .menu:hover{
+    animation: ponta 0.9s forwards;
     width: 115%;
     background-color: #a29484;
-    transition: 0.5s;
-
+    transition: 0.9s;
+    border-bottom: 5px solid #85786a;
 }
 #colunaMenu{
     background-color: #3e2400 ;
@@ -142,34 +160,68 @@ a{
 }
 #fotoEsquerdaQuemSomos{
     margin-left: 1%;
-    margin-right: 1%;
-    height: 6%;
+    margin-right: 2%;
+
+    height: 0%;
     width: 11%;
+
+    padding-right: 5%;
+    padding-bottom: 14%;
+
+    border-right: 5px solid #a29484;
+    border-radius: 10px;
+
 }
 #fotoEsquerdaQuemSomos>img{
-    margin-top: 10vh;
-    border: 5px solid #a29484;
     width: 100%;
+
+    margin-top: 20vh;
+
+    border: 5px solid #a29484;
+    border-radius:  0px 50px 0px 50px;
+
 }
 #fotoDireitaQuemSomos{
     
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top:25%;
     height: 5%;
     width: 15%;
     
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top:10% ;
+
+    border-left: 5px solid #a29484;
+    border-radius: 10px;
+
+    padding-left: 5vh;
+    padding-top: 10vh;
+    padding-bottom:10vh ;
 }
 #fotoDireitaQuemSomos>img{
     border: 5px solid #a29484;
+    border-radius: 50px 0px 50px 0px ;
     width: 90%;
 
 }
 #textoQuemSomos{
-    margin-top: 10%;
+    display: flex; 
+
     font-family: 'ASKR';
-    font-size: 3vh;
+    font-size: 200%;
+    line-height: 170%;
+
+    margin-top: 10%;
+
     width: 70%;
+}
+.texto-1{
+    margin-top:-10%;
+    align-content: left;
+    margin-right: 10% ;
+}
+.text-2{
+    margin-top: 20%;
+    align-content: right;
 }
 /* ONDE ESTAMOS */
 #onde-estamos-corpo{
@@ -245,4 +297,34 @@ a{
     background-color: #DDD ;
     border-radius: 25px;
 
+}
+/* botao de pausa da musica */
+.fa-pause{
+    background-color: none;
+
+}
+#pause{
+    background-color: transparent;
+    color: #fff;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 3.5vh;
+    height: 3.5vh;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    z-index: 1;
+}
+#pause:hover{
+    background-color: #fff;
+    color: #000;
+}
+#myVideo{
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    opacity: 15%;
 }

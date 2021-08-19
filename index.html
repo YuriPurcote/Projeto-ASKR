@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="css/image/logoSemMenu.png" type="image/x-icon">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c2eaecad4c.js"></script>
     <title>ASKR -CoffeBar</title>
 </head>
 <body>
-    <button id="pause">
-        a
+    <button id="pause"  onclick="javascript:playPause()">
+        <i id="playMusicBTN" class="fas fa-play" ></i>
     </button>
-    <div>
-        <i class="fas fa-car"></i>
-        <!-- <i class="fas fa-pause" style="font-size:48px;color: red;"></i>  -->
-    </div>
-    <embed src="Musica/🎵 Drums of Drakkar vikings music No Copyright Music 🎧_160k.mp3" autostart="false" loop="true" width="0px" height="0px" volume="10%">    
+    <audio id="audio"  autoplay>
+        <source auto src="Musica/🎵 Drums of Drakkar vikings music No Copyright Music 🎧_160k.mp3" type="audio/mpeg" loop="true"  volume="1">    
+    </audio>
     <div class="principal">
-        <div class="col-ghost">a</div>
+        <div class="col-ghost"></div>
         <div class="col-menu">
             <div id="logoMenuLateral">
                 <img src="css/image/logoSemMenu.png" alt="">
@@ -42,13 +40,16 @@
         </div>
         <div class="col-corpo">
             <div id="capa">
+                <video autoplay muted loop id="myVideo">
+                    <source src="video/MONTAIN.mp4" type="video/mp4">
+                </video>
                 <div class="icone-capa">
                     <img src="./css/image/logoSemMenu.png" alt="">
                 </div>
                 <div class="logo-nome logo-letters">
                     <div class="bordaLateralInicio">
                         <div class="tituloEmpresa"> ASKR </div>
-                        <div class="subtituloEmpresa"> Coffeebar</div>
+                        <div class="subtituloEmpresa"> COFFEEBAR</div>
                     </div>
                 </div>
             </div>
@@ -61,11 +62,20 @@
                         <img src="css/image/hornDRINK.jpg" alt="">
                     </div>
                     <div id="textoQuemSomos">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos odio molestiae porro praesentium, corrupti nulla numquam itaque? Eveniet, cupiditate illo adipisci accusantium voluptate hic ratione id quia impedit commodi quis.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error dolore maiores ad voluptas consectetur laborum dicta, molestias aut reiciendis perferendis. Ipsam laudantium esse, amet incidunt quia debitis sapiente magnam sit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam facilis, culpa consequuntur fugiat dignissimos error voluptatem iusto reiciendis recusandae quas similique vero nobis ullam mollitia expedita voluptas officiis autem.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vel placeat consectetur numquam, qui labore! Magni fugit fuga nemo deleniti, obcaecati iure reprehenderit adipisci eligendi nesciunt ratione eveniet impedit tempora?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facere sapiente, facilis exercitationem vel veniam necessitatibus corporis, fugiat excepturi rem, minima voluptates? Dolorum doloremque, cumque placeat repellendus sint fugiat nobis.
+                        <div class="texto-1">
+                            O Askr Coffeebar nasceu de um sonho de proporcionar experiências únicas e marcantes.
+                            Nosso maior objetivo é ver o brilho nos olhos de quem nos conhece, é fascinar e reinventar o conceito de um bar temático. Por isso, somos muito mais que um bar, somos uma reinvenção da Era Viking.
+                        </div>
+                        <div class="text-2">
+                            014. "Bêbado eu estava,
+estava bêbado demais
+com o sábio Fjalarr;
+por causa da melhor bebida,
+que cada homem
+recobre sua mente."
+
+Hávamal - Edda em Prosa
+                        </div>
                     
                     </div>
                     <div id="fotoDireitaQuemSomos">
@@ -118,5 +128,8 @@
         </div>
     </div>
     <script src="./JS/app.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
