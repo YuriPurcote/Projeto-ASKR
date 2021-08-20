@@ -19,13 +19,12 @@ function scrollToIdOnClick(event) {
     var audio =document.getElementById('audio');
     var playMusicBTN =document.getElementById('pause');
     var count = 0 ;
+
     function playPause() {
-        if(count == 0) {
-            count =1;
-            audio.play();
-        }else{
-            count = 0;
+        if(count == 1) {
             audio.pause();
+        }else{
+            audio.play();
         }
         
     }
