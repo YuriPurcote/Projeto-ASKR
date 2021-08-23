@@ -21,10 +21,13 @@ function scrollToIdOnClick(event) {
     var count = 0 ;
 
     function playPause() {
-        if(count == 1) {
-            audio.pause();
-        }else{
+        if(count == 0) {
             audio.play();
+            count= 1;
+        }else{
+            audio.pause();
+            count= 0;
+
         }
         
     }

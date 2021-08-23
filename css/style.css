@@ -48,10 +48,11 @@
     transition: 0.5s;
 }
 .col-corpo{
-    height:100vh;
     flex: 1;
+    
 }
 #capa{
+    
     display: flex;
     padding: 0.1%;
     background-color: var(--corSecundaria);
