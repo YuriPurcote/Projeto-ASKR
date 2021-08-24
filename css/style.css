@@ -74,7 +74,7 @@
     
 }
 #cardapio{
-    height: 235vh;
+    height: 270vh;
     background:var(--cor2);
 }
 .titulo{
@@ -83,6 +83,14 @@
     font-size: 20vh;
     line-height: 80%;
 
+}
+#cardapio>.titulo{
+    font-size: 5vh;
+    background-color: var(--corSecundaria);
+    color: var(--cor3);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
 }
 .legenda{
     font-family: 'ASKR';

@@ -31,3 +31,6 @@ function scrollToIdOnClick(event) {
         }
         
     }
+    
+    vid=document.getElementById("myVideo")
+    vid.disablePictureInPicture = true
