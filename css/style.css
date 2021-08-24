@@ -92,6 +92,14 @@
     margin-bottom: 1%;
     padding: 1%;
 }
+#menu>.titulo{
+    font-size: 5vh;
+    background-color: var(--corSecundaria);
+    color: var(--cor3);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+}
 .legenda{
     font-family: 'ASKR';
     margin-left: 20%;
