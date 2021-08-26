@@ -130,7 +130,7 @@
     }
     
 }
-.menu{
+.menu>a{
     display: block;
     text-align: center;
     margin-top: 3%;
@@ -141,10 +141,11 @@
     animation-duration: 2s;
 
     font-family: 'ASKR' ;
-    font-size: 2vh;
+    font-size: 70%;
     width: 105%;
     height: 3vh;
-    padding-top: 5%;
+    padding: 5%;
+    padding-top: 15%;
     
 }
 @keyframes ponta {
@@ -156,7 +157,7 @@
     }
     
 }
-.menu:hover{
+.menu>a:hover{
     animation: ponta 0.9s forwards;
     width: 115%;
     background-color: var(--cor2);
@@ -170,14 +171,10 @@ a{
     color: #000;
     text-decoration: none;
 } 
-.icone-capa{
-    width: 50%;
-}
 .icone-capa>img{
-    
-    padding-left:45%;
-    padding-top: 30%;
-    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 50%;
 }
 .logo-nome{
     width: 60%;
