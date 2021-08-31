@@ -74,7 +74,7 @@
     
 }
 #cardapio{
-    height: 270vh;
+    height: 900vh;
     background:var(--cor2);
 }
 .titulo{
@@ -442,4 +442,9 @@ iframe{
     top: 0;
     bottom: 0;
     
+}
+/* botao comanda */
+.botao-comanda>img{
+    padding: 20px;
+    padding-left: 25px;
 }
