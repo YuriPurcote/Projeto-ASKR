@@ -15,24 +15,22 @@ function scrollToIdOnClick(event) {
         behavior: "smooth",
     });
 }
+    /* para a musica */
+    var audio =document.getElementById('audio');
+    var playMusicBTN =document.getElementById('pause');
+    var count = 0 ;
 
-/* para a musica */
+    function playPause() {
+        if(count == 0) {
+            audio.play();
+            count= 1;
+        }else{
+            audio.pause();
+            count= 0;
 
-var audio =document.getElementById('audio');
-var playMusicBTN =document.getElementById('pause');
-var count = 0 ;
-
-function playPause() {
-    if(count == 0) {
-        audio.play();
-        count= 1;
-    }else{
-        audio.pause();
-        count= 0;
-
+        }
+        
     }
-    
-}
     
     vid=document.getElementById("myVideo")
     vid.disablePictureInPicture = true
