@@ -430,9 +430,7 @@ iframe{
 }
 #myVideo{
     min-width: 100%;
-    max-width: 100%;
     min-height: 100%;
-    max-height: 100%;
     position: fixed;
     z-index: 0;
     opacity: 10%;
@@ -448,3 +446,100 @@ iframe{
     padding: 20px;
     padding-left: 25px;
 }
+
+
+/* COMANDA-MODAL */
+.comanda{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    right: 10%;
+    left: 10%;
+}
+.comanda>.titulo{
+    font-size: 5vh;
+    background-color: var(--corSecundaria);
+    color: var(--cor3);
+    padding: 1%;
+}
+.titulo>.subTitulo{
+    font-size: 1.5rem;
+    background-color: var(--corSecundaria);
+    color: var(--cor3);
+}
+.corpo-comanda{
+    font-size: 1.5rem;
+    background-color: var(--corSecundaria);
+    color: var(--cor3);
+}
+
+/* The container */
+.container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .container{
+      margin-left: 5%;
+      margin-bottom: 100px;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--cor3);
+    border-radius: 50%;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: var(--corTerciarida);
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: var(--cor2);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--corSecundaria);
+  }
+  .obs,h4{
+      font-family: 'ASKR';
+      margin-left: 2rem;
+  }
+  .obsBox{
+      margin: 1rem 0 2rem 3.5rem;
+      width: 80%;
+      height:10rem;
+      border-radius:  15px 15px 15px 15px;
+  }

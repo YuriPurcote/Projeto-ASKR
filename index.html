@@ -41,7 +41,7 @@
         <div class="col-corpo">
             <div id="capa">
                 <video autoplay muted loop id="myVideo">
-                    <source allowfullscreen="true" src="video/MONTAIN.mp4" type="video/mp4">
+                    <source src="video/MONTAIN.mp4" type="video/mp4">
                 </video>
                 <div class="icone-capa">
                     <img src="./css/image/logoSemMenu.png" alt="">
@@ -103,15 +103,51 @@
                     </div>
                 </div>
             </div>
-            <div id="cardapio">
+            <!-- MODAL PARA COMANDA -->
+            <div class="comanda" id="comanda">
+                <div class="titulo">
+                    COMANDA
+                    <div class="subTitulo">
+                        Confirme seu Pedido
+                    </div>
+                </div>
+                <div class="corpo-comanda">
+                    <h4>
+                        PONTO DA CARNE SE HOUVER NO PEDIDO
+                    </h4>
+                    <label class="container">Mal Passado 
+                        <input type="radio"  name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Ao Ponto Para Mal Passada 
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">No Ponto 
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Ao Ponto Para Bem passada 
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Bem Passada 
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="obs">
+                        OBSERVAÇÕES <br>
+                        <input type="text" class="obsBox" placeholder="Sem cebola, maionese,picles...">
+                    </div>
+                </div>
+            </div>
+            <div id="cardapio"><!-- MELHORAR CARDAPIO -->
                 <div class="titulo-botao">
                     <div class="titulo">
                         CARDAPIO
                     </div>
                     <div class="botao-comanda">
-                        <button>
-                            <img src="css/image/ICONES/clipart2396345.png" width="50px">
-                        </button>
+                        <img src="css/image/ICONES/clipart2396345.png" width="50px" id="myBtn">
                     </div>
                 </div>
                 <div class="legenda">
