@@ -6,6 +6,7 @@
     --cor1:#6c5435;
     --cor2:#85715a;
     --cor3:#A68560;
+    --cor4:#908c7c;
 
 }
 @font-face {
@@ -70,12 +71,15 @@
 }
 #ondeEstamos{
     height: 100vh;
-    background:#908c7c;
+    background:var(--cor4);
     
 }
 #cardapio{
     height: 855vh;
     background:var(--cor2);
+}
+#fechar{
+    padding: 0 0 0 95% ;
 }
 .titulo{
     text-align: center;
@@ -311,13 +315,17 @@ iframe{
     display: flex;
     flex: 2;
 }
-.botao-comanda{
-    margin-left: 55%;
-    margin-top: 2.5vh;
-    background: #908c7c;
+#myBtn{
+    display: absolute;
+    z-index: 1;
+    margin: 2.5vh 0 0 55%;
+    background: var(--cor4);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+}
+#myBtn:active{
+    background: var(--corSecundaria);
 }
 #menu{
     margin-left: 1vh;
@@ -374,14 +382,13 @@ iframe{
 }
 .valor{
     font-family: 'ASKR';
-    margin-top: 5%;
-    margin-left: 2%;
+    margin: 5% 0 0 0;
     color: var(--cor3);
     font-size:5vh;
     height: 10%;
 }
 .divisor{
-    margin-left: -10%;
+    margin:0 0 0 -10%;
     font: none;
     background-color: var(--cor3);
     width: 25%;
@@ -389,12 +396,18 @@ iframe{
     clip-path: polygon(90% 0, 100% 0%, 70% 100%, 60% 100%);
 }
 .adicionar-comanda{
-    margin-top:6%;
-    margin-left:5%;
+    margin:6% 5%;
     color: var(--cor3);
     font-family: 'ASKR';
     font-size: 180%;
+    display: absolute;
+    z-index: 1;
 }
+.fa-plus-square:hover,.fa-minus-square:hover{
+    color: var(--corSecundaria);
+    cursor: pointer;
+}
+
 /* SCROLL BAR */
 ::-webkit-scrollbar{
     background: #1C1000 ;
@@ -429,7 +442,7 @@ iframe{
     color: #000;
 }
 #myVideo{
-    min-width: 100%;
+    max-width: 100%;
     min-height: 100%;
     position: fixed;
     z-index: 0;
@@ -449,23 +462,52 @@ iframe{
 
 
 /* COMANDA-MODAL */
-.comanda{
-    position: absolute;
-    display: none;
-    z-index: 1;
-    right: 10%;
-    left: 10%;
+#pedido,#comanda{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding: 10% 0 0 0 ; /* Location of the box */
+    left: 20%;
+    right: 20%;
+    top: 0;
+    width: 50%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
 }
-.comanda>.titulo{
+.comanda-corpo{
+    zoom: 70%;
+}
+.fa-check-double{
+    margin: 0 0 0 98%;
+}
+
+.pedido-titulo{
+    margin:0 0 0 0;
+}
+
+#pedido>.titulo,#comanda>.titulo{
     font-size: 5vh;
     background-color: var(--corSecundaria);
     color: var(--cor3);
-    padding: 1%;
+    padding: 1% 5% 0 10%;
+}
+#pedido>.titulo{
+    padding: 0 0 0 0;
 }
 .titulo>.subTitulo{
     font-size: 1.5rem;
     background-color: var(--corSecundaria);
     color: var(--cor3);
+    padding: 0 0 0 0;
+}
+#comanda>.titulo>.subTitulo{
+    font-size: 1.5rem;
+    background-color: var(--corSecundaria);
+    color: var(--cor3);
+    padding: 0 0 0 0;
+}
+#pedido>.titulo>.subTitulo{
+
 }
 .corpo-comanda{
     font-size: 1.5rem;
@@ -542,4 +584,34 @@ iframe{
       width: 80%;
       height:10rem;
       border-radius:  15px 15px 15px 15px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .fa-align-justify {
+      font-size: 50px;
+      transition: .9s;
+  }
+  .fa-align-justify:hover {
+      transition: .9s;
+      font-size: 50px;
+      color: #DDD;
+  }
+  hr{
+      margin: 15px 0 15px 0;
+  }
+  #close{
+    display: absolute;
+    z-index: 2;
+    margin: 0 0 0 75%;
+    cursor: pointer;
+  }
+  #close:hover{
+      color: var(--corTerciarida);
+  }
+  .botao-comanda>.fa-time{
+      margin: 0 0 0 50%;
   }

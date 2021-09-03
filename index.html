@@ -14,11 +14,13 @@
     <button id="pause"  onclick="javascript:playPause()">
         <i id="playMusicBTN" class="fas fa-play" ></i>
     </button>
-    <audio id="audio"autoplay="true">
+    <audio id="audio">
         <source auto src="Musica/🎵 Drums of Drakkar vikings music No Copyright Music 🎧_160k.mp3" type="audio/mpeg" loop="true"  volume="1">    
     </audio>
     <div class="principal">
+        <!-- COLUNA FANTASMA -->
         <div class="col-ghost"></div>
+        <!-- COLUNA MENU -->
         <div class="col-menu">
             <div id="logoMenuLateral">
                 <img src="css/image/logoSemMenu.png" alt="">
@@ -38,14 +40,19 @@
                 </div>
             </div>
         </div>
+        <!-- COLUNA CORPO -->
         <div class="col-corpo">
+            <!-- CAPA -->
             <div id="capa">
+                <!-- VIDEO -->
                 <video autoplay muted loop id="myVideo">
                     <source src="video/MONTAIN.mp4" type="video/mp4">
                 </video>
+                <!-- CAPA -->
                 <div class="icone-capa">
                     <img src="./css/image/logoSemMenu.png" alt="">
                 </div>
+                <!-- LOGO -->
                 <div class="logo-nome logo-letters">
                     <div class="bordaLateralInicio">
                         <div class="tituloEmpresa"> ASKR </div>
@@ -53,6 +60,7 @@
                     </div>
                 </div>
             </div>
+            <!-- QUEM SOMOS -->
             <div id="quem-somos">
                 <div class="titulo">
                     QUEM SOMOS
@@ -83,6 +91,7 @@
                     </div>
                 </div>
             </div>
+            <!-- ONDE ESTAMOS -->
             <div id="ondeEstamos">
                 <div class="titulo">
                     ONDE ESTAMOS
@@ -103,51 +112,103 @@
                     </div>
                 </div>
             </div>
-            <!-- MODAL PARA COMANDA -->
-            <div class="comanda" id="comanda">
-                <div class="titulo">
-                    COMANDA
-                    <div class="subTitulo">
-                        Confirme seu Pedido
-                    </div>
-                </div>
-                <div class="corpo-comanda">
-                    <h4>
-                        PONTO DA CARNE SE HOUVER NO PEDIDO
-                    </h4>
-                    <label class="container">Mal Passado 
-                        <input type="radio"  name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Ao Ponto Para Mal Passada 
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">No Ponto 
-                        <input type="radio" checked="checked" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Ao Ponto Para Bem passada 
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Bem Passada 
-                        <input type="radio" name="radio">
-                        <span class="checkmark"></span>
-                    </label>
-                    <div class="obs">
-                        OBSERVAÇÕES <br>
-                        <input type="text" class="obsBox" placeholder="Sem cebola, maionese,picles...">
-                    </div>
-                </div>
-            </div>
+            <!-- CARDAPIO -->
             <div id="cardapio"><!-- MELHORAR CARDAPIO -->
                 <div class="titulo-botao">
-                    <div class="titulo">
+                    <div class="titulo" >
                         CARDAPIO
                     </div>
-                    <div class="botao-comanda">
-                        <img src="css/image/ICONES/clipart2396345.png" width="50px" id="myBtn">
+                    <button id="myBtn">
+                        <div class="botao-comanda">
+                            <i class="fas fa-align-justify"></i>
+                        </div>
+                    </button>
+                </div>
+                <!-- div que deve aparecer como janela quando o item for adicionado a comanda -->
+                <div  id="pedido">
+                    <div class="titulo" >
+                        <i class="fas fa-times" id="fechar"></i>
+                        <div class="pedido-titulo">
+                            PEDIDO
+                        </div>
+                        <div class="subTitulo">
+                            Confirme seu Prato
+                        </div>
+                    </div>
+                    <div class="corpo-comanda">
+                        <h4>
+                            PONTO DA CARNE SE HOUVER NO PEDIDO
+                        </h4>
+                        <label class="container">Mal Passado 
+                            <input type="radio"  name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">No Ponto 
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Bem Passada 
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <hr>
+                        <div class="obs">
+                            OBSERVAÇÕES <br>
+                            <input type="text" class="obsBox" placeholder="Sem cebola, maionese,picles...">
+                        </div>
+                    </div>
+                </div>
+                <div id="comanda">
+                    <div class="titulo">
+                        <i class="fas fa-check-double"></i>
+                        <div>
+                            COMANDA
+                        </div>
+                        <div class="subTitulo">
+                            CONFIRME SEU PEDIDO
+                        </div>
+                    </div>
+                    <div class="comanda-corpo">
+                        <div class="prato">
+                            <div class="imagem">
+                                <img src="css/image/PRATOS/COMIDA/Almondegas Suecas Porção.jpg" alt="">
+                            </div>
+                            <div class="nome">
+                                ALMÔNDEGAS SUECAS 
+                            </div>
+                            <div class="quantidade">
+                                PORÇÃO(~350 GR)
+                            </div>
+                            <div class="divisor">
+                                a
+                            </div>
+                            <div class="valor">
+                                R$ 15,99
+                            </div>
+                            <div class="adicionar-comanda">
+                              <i class="far fa-plus-square"></i>&nbsp;<span class="number"> 1</span> &nbsp;<i class="far fa-minus-square"></i>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="prato">
+                            <div class="imagem">
+                                <img src="css/image/PRATOS/BEBIDAS/Irish Coffeee.jpg" alt="">
+                            </div>
+                            <div class="nome">
+                                IRISH COFFEE(café irlandês)
+                            </div>
+                            <div class="quantidade">
+                                350 Ml
+                            </div>
+                            <div class="divisor">
+                                a
+                            </div>
+                            <div class="valor">
+                                R$ 25,99
+                            </div>
+                            <div class="adicionar-comanda">
+                                <i class="far fa-plus-square"></i>&nbsp;<span class="number"> 1</span> &nbsp;<i class="far fa-minus-square"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="legenda">
@@ -157,7 +218,7 @@
                       PRATOS  
                 </div>
                 <div id="menu">
-                   <!-- ok --> <div class="prato">
+        <!-- ok --> <div class="prato">
                         <div class="imagem">
                             <img src="css/image/PRATOS/COMIDA/Almondegas Suecas Porção.jpg" alt="">
                         </div>
@@ -176,6 +237,7 @@
                         <div class="adicionar-comanda">
                           <i class="far fa-plus-square"></i>
                         </div>
+                        
                     </div>
                     <!-- ok --><div class="prato">
                         <div class="imagem">
@@ -769,7 +831,7 @@
     </div>
     <script src="./JS/app.js"></script>
     <script>
-       
+        
     </script>
 </body>
 </html>
