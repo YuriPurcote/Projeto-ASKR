@@ -92,9 +92,7 @@
     font-size: 5vh;
     background-color: var(--corSecundaria);
     color: var(--cor3);
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding: 1%;
+    padding: 1% 0 1% 0;
 }
 #menu>.titulo{
     font-size: 5vh;
@@ -106,7 +104,7 @@
 }
 .legenda{
     font-family: 'ASKR';
-    margin-left: 20%;
+    margin:0 0 0 25%;
     font-size: 3.5vh;
 }
 .tituloEmpresa{
@@ -307,9 +305,10 @@ iframe{
 }
 .titulo-botao>.titulo{
     font-family: 'ASKR';
-    font-size: 20vh;
+    font-size: 800%;
     line-height: 80%;
     display: inline;
+    margin: 0 0 0 40%;
 }
 .titulo-comanda{
     display: flex;
@@ -318,7 +317,7 @@ iframe{
 #myBtn{
     display: absolute;
     z-index: 1;
-    margin: 2.5vh 0 0 55%;
+    margin: 2.5vh 0 0 25%;
     background: var(--cor4);
     border-radius: 50%;
     width: 90px;
@@ -334,24 +333,27 @@ iframe{
 }
 .prato:nth-child(odd){
     display: flex;
-    flex: 2;
-    background: var(--corPrincipal);
-    width:100%;
     height: 26.63vh;
+    background: var(--corPrincipal);
+
+    border: 5px solid var(--cor2);
 }
 .prato:nth-child(even){
     display: flex;
-    flex: 2;
     background: var(--cor2);
-    width:100%;
     height: 26.63vh;
+    border-top: 2px solid var(--corSecundaria);
+    border-bottom: 2px solid var(--corSecundaria);
 }
 /* MENU DO CARDAPIO */
-
+.prato:nth-child(even)>.quantidade,.prato:nth-child(even)>.divisor,.prato:nth-child(even)>.valor{
+    color: var(--corSecundaria);
+}
 .imagem{
-    width: 22%;
-    height: 90%;
+    width: 20%;
+    height: 60%;
     justify-content: center;
+    padding: 2% 0 0 2%;
     
 }
 .imagem>img{
@@ -370,7 +372,7 @@ iframe{
     min-width: 10%;
     max-width: 10%;
 }
-.nome {
+.nome{
     min-width: 35%;
     max-width: 35%;
     font-family: 'ASKR';
@@ -380,6 +382,17 @@ iframe{
     font-size:5vh;
     height: 10%;
 }
+.prato:nth-child(even)>.nome{
+    min-width: 35%;
+    max-width: 35%;
+    font-family: 'ASKR';
+    margin-top: 5%;
+    margin-left: 10%;
+    color: var(--corSecundaria);
+    font-size:5vh;
+    height: 10%;
+}
+
 .valor{
     font-family: 'ASKR';
     margin: 5% 0 0 0;
@@ -395,6 +408,18 @@ iframe{
     opacity: 55%;
     clip-path: polygon(90% 0, 100% 0%, 70% 100%, 60% 100%);
 }
+.prato:nth-child(even)>.adicionar-comanda{
+    color: var(--corSecundaria);
+
+}
+.prato:nth-child(even)>.adicionar-comanda:hover{
+    color: var(--corPrincipal);
+
+}
+.prato:nth-child(odd)>.adicionar-comanda:hover{
+    color: var(--cor1);
+
+}
 .adicionar-comanda{
     margin:6% 5%;
     color: var(--cor3);
@@ -403,10 +428,18 @@ iframe{
     display: absolute;
     z-index: 1;
 }
-.fa-plus-square:hover,.fa-minus-square:hover{
+.fa-minus-square:hover{
     color: var(--corSecundaria);
     cursor: pointer;
 }
+
+.prato:nth-child(even)>.fa-plus-square:hover{
+    color: var(--cor1);
+}
+.prato:nth-child(even)>.fa-plus-square{
+    color: var(--corSecundaria);
+}
+
 
 /* SCROLL BAR */
 ::-webkit-scrollbar{
