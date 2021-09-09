@@ -38,10 +38,21 @@ function playPause() {
 
    // Get the modal
    var modal    = document.getElementById("pedido");
+   var comanda  = document.getElementById("comanda");
+   var realizado  = document.getElementById("pedido-feito");
+ 
+
    var btn      = document.getElementsByClassName("far")[4];
    var fechar   = document.getElementById("fechar");
-   var comanda  = document.getElementById("comanda");
+   var fecharComanda   = document.getElementById("fechar-comanda");
    var botao    = document.getElementById("myBtn");
+
+   var pedidoChecado = document.getElementsByClassName('fa-check-double')[0];
+
+   pedidoChecado.onclick = function() {
+       comanda.style.display = "none"; 
+       realizado.style.display = "block"; 
+   }
 
    btn.onclick = function() {
        modal.style.display = "block"; 
@@ -49,12 +60,18 @@ function playPause() {
    fechar.onclick = function() {
        modal.style.display = "none"; 
    }
+
+
    botao.onclick = function() {
        comanda.style.display = "block"; 
+   }
+   fecharComanda.onclick = function() {
+       comanda.style.display = "none"; 
    }
    window.onclick = function(event) {
        if (event.target == comanda) {
            comanda.style.display = "none";
            modal.style.display = "none";
+           realizado.style.display = "none";
        }
    }
