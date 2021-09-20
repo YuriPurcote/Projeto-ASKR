@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="css/image/logoSemMenu.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c2eaecad4c.js"></script>
+    <title>Askr Coffeebar</title>
+</head>
+<body>
+    <button id="pause"  onclick="javascript:playPause()">
+        <i id="playMusicBTN" class="fas fa-play" ></i>
+    </button>
+    <audio id="audio">
+        <source auto src="Musica/🎵 Drums of Drakkar vikings music No Copyright Music 🎧_160k.mp3" type="audio/mpeg" loop="true"  volume="1">    
+    </audio>
+    <div class="principal">
+        <!-- COLUNA FANTASMA -->
+        <div class="col-ghost"></div>
+        <!-- COLUNA MENU -->
+        <div class="col-menu">
+            <div id="logoMenuLateral">
+                <img src="css/image/logoSemMenu.png" alt="">
+            </div>
+            <div id="colunaMenu">
+                <div class="menu">
+                    <a href="#capa"> INICIO</a>
+                </div>
+                <div class="menu">
+                    <a href="#cardapio">CARDAPIO</a>
+                </div>
+                <div class="menu">
+                    <a href="#quem-somos">QUEM SOMOS</a>
+                </div>
+                <div class="menu">
+                    <a href="#ondeEstamos">ONDE ESTAMOS</a>
+                </div>
+            </div>
+        </div>
+        <!-- COLUNA CORPO -->
+        <div class="col-corpo">
+            <!-- CAPA -->
+            <div id="capa">
+                <!-- VIDEO -->
+                <video autoplay muted loop id="myVideo">
+                    <source src="video/MONTAIN.mp4" type="video/mp4">
+                </video>
+                <!-- CAPA -->
+                <div class="icone-capa">
+                    <img src="./css/image/logoSemMenu.png" alt="">
+                </div>
+                <!-- LOGO -->
+                <div class="logo-nome logo-letters">
+                    <div class="bordaLateralInicio">
+                        <div class="tituloEmpresa"> ASKR </div>
+                        <div class="subtituloEmpresa"> COFFEEBAR</div>
+                    </div>
+                </div>
+            </div>
+            <!-- QUEM SOMOS -->
+            <div id="quem-somos">
+                <div class="titulo">
+                    QUEM SOMOS
+                </div>
+                <div id="quem-somos-corpo">
+                    <div id="fotoEsquerdaQuemSomos">
+                        <img src="css/image/hornDRINK.jpg" alt="">
+                    </div>
+                    <div id="textoQuemSomos">
+                        <div class="texto-1">
+                            O Askr Coffeebar nasceu de um sonho de proporcionar experiências únicas e marcantes.
+                            Nosso maior objetivo é ver o brilho nos olhos de quem nos conhece, é fascinar e reinventar o conceito de um bar temático. Por isso, somos muito mais que um bar, somos uma reinvenção da Era Viking.
+                        </div>
+                        <div class="text-2">
+                            014. "Bêbado eu estava,
+                            estava bêbado demais
+                            com o sábio Fjalarr;
+                            por causa da melhor bebida,
+                            que cada homem
+                            recobre sua mente."
+
+                            Hávamal - Edda em Prosa
+                        </div>
+                    
+                    </div>
+                    <div id="fotoDireitaQuemSomos">
+                        <img src="css/image/viking-drinking-mug.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- ONDE ESTAMOS -->
+            <div id="ondeEstamos">
+                <div class="titulo">
+                    ONDE ESTAMOS
+                </div>
+                <div id="onde-estamos-corpo">
+                    <div id="foto-mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14409.77749080225!2d-49.29112056785274!3d-25.456833164742466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce483e0be9bbb%3A0xaafd8d6cd647ed31!2s%C3%81gua%20Verde%2C%20Curitiba%20-%20PR!5e0!3m2!1spt-PT!2sbr!4v1629760610382!5m2!1spt-PT!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div id="endereco">
+                        <div class="endereco">
+                            R. PROF. ASSIS GONÇALVES, <br>
+                             1506 - ÁGUA VERDE, <br>
+                             CURITIBA - PR, 80620-250
+                        </div>
+                        <div class="endereco">
+                            CONTATO
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CARDAPIO -->
+            <div id="cardapio"><!-- MELHORAR CARDAPIO -->
+                <div class="titulo-botao">
+                    <div class="titulo" >
+                        CARDÁPIO
+                    </div>
+                    <button id="myBtn">
+                        <div class="botao-comanda">
+                            <i class="fas fa-align-justify"></i>
+                        </div>
+                    </button>
+                </div>
+                <!-- div que deve aparecer como janela quando o item for adicionado a comanda -->
+                <div  id="pedido">
+                    <div class="titulo" >
+                        <i class="fas fa-times" id="fechar"></i>
+                        <div class="pedido-titulo">
+                            PEDIDO
+                        </div>
+                        <div class="subTitulo">
+                            Confirme seu Prato
+                        </div>
+                    </div>
+                    <div class="corpo-comanda">
+                        <h4>
+                            PONTO DA CARNE SE HOUVER NO PEDIDO
+                        </h4>
+                        <label class="container">Mal Passado 
+                            <input type="radio"  name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">No Ponto 
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Bem Passada 
+                            <input type="radio" name="radio">
+                            <span class="checkmark"></span>
+                        </label>
+                        <hr>
+                        <div class="obs">
+                            OBSERVAÇÕES <br>
+                            <input type="text" class="obsBox" placeholder="Sem cebola, maionese,picles...">
+                        </div>
+                    </div>
+                </div>
+                <div id="pedido-feito">
+                    <div class="titulo">
+                        PEDIDO REALIZADO COM SUCESSO, ESPERE APROXIMADAMENTE 40 MIN NAS DEPENDÊNCIAS DO ASKR
+                    </div>
+                </div>
+                <div id="comanda">
+                    <div class="titulo">
+                        <i class="fas fa-times" id="fechar-comanda"></i>
+                        <div>
+                            OLÁ A SUA MESA É A <B> Nº24</B> E ESSA É SUA COMANDA
+                        </div>
+                        
+                        <div class="subTitulo">
+                            CONFIRME SEU PEDIDO
+                        </div>
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="comanda-corpo">
+                        <div class="prato">
+                            <div class="imagem">
+                                <img src="css/image/PRATOS/COMIDA/Almondegas Suecas Porção.jpg" alt="">
+                            </div>
+                            <div class="nome">
+                                ALMÔNDEGAS SUECAS 
+                            </div>
+                            <div class="quantidade">
+                                PORÇÃO(~350 GR)
+                            </div>
+                            <div class="divisor">
+                                a
+                            </div>
+                            <div class="valor">
+                                R$ 15,99
+                            </div>
+                            <div class="adicionar-comanda">
+                              <i class="far fa-plus-square"></i>&nbsp;<span class="number"> 1</span> &nbsp;<i class="far fa-minus-square"></i>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="prato">
+                            <div class="imagem">
+                                <img src="css/image/PRATOS/BEBIDAS/Irish Coffeee.jpg" alt="">
+                            </div>
+                            <div class="nome">
+                                IRISH COFFEE(café irlandês)
+                            </div>
+                            <div class="quantidade">
+                                350 Ml
+                            </div>
+                            <div class="divisor">
+                                a
+                            </div>
+                            <div class="valor">
+                                R$ 25,99
+                            </div>
+                            <div class="adicionar-comanda">
+                                <i class="far fa-plus-square"></i>&nbsp;<span class="number"> 1</span> &nbsp;<i class="far fa-minus-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="legenda">
+                    FAÇA SEU PEDIDO SEM SAIR DA MESA, EXCLUSIVO PARA CLIENTES NO RESTAURANTE
+                </div>         
+                <div class="titulo">
+                      PRATOS  
+                </div>
+                <div id="menu">
+        <!-- ok --> <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/Almondegas Suecas Porção.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            ALMÔNDEGAS SUECAS 
+                        </div>
+                        <div class="quantidade">
+                            PORÇÃO(~350 GR)
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 15,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                        
+                    </div>
+                    <!-- ok --><div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/Batata Fritas com Queijo e Cebolhinha.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            BATATA FRITA C/ QUEIJO E CEBOLINHA
+                        </div>
+                        <div class="quantidade">
+                            PORÇÃO (~500 GR)
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 21,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <!-- ok --><div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/Batata Fritas Porção.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            BATATA FRITA
+                        </div>
+                        <div class="quantidade">
+                            PORÇÃO (~300 GR)
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 17,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/LEGUMES COZIDOS.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            KOKTA GRÖNSAKER (Legumes cozidos)
+                        </div>
+                        <div class="quantidade">
+                            PORÇÃO (~400 GR)
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 18,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/Mørbradbøffer.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            Mørbradbøffer (Filé suino)
+                        </div>
+                        <div class="quantidade">
+                            PORÇÃO (~350 GR)
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 15,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/Peixe na Cerveja.jpeg" alt="">
+                        </div>
+                        <div class="nome">
+                            FISK STUVAN I ÖL (peixe na cerveja)
+                        </div>
+                        <div class="quantidade">
+                            PORÇÃO (~300 GR)
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 31,11
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/pão com almondega.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            PÃO COM ALMÔNDEGAS  
+                        </div>
+                        <div class="quantidade">
+                            UN
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 17,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/COMIDA/salada sueca de pepino.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            SALADA SUECA DE PEPINO 
+                        </div>
+                        <div class="quantidade">
+                            ~300 GR
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 19,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="titulo">
+                        BEBIDAS
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Coca Cola Lata.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            COCA COLA LATA
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 5,59
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Copo chopp.png" alt="">
+                        </div>
+                        <div class="nome">
+                            COPO CHOPP
+                        </div>
+                        <div class="quantidade">
+                            ~350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 12,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Copo chopp.png" alt="">
+                        </div>
+                        <div class="nome">
+                            COPO CHOPP
+                        </div>
+                        <div class="quantidade">
+                            ~500 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 15,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/drinking horn COM HIDROMEL.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            HORN COM HIDROMEL
+                        </div>
+                        <div class="quantidade">
+                            ~200 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 42,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Fanta Guaraná Lata.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            FANTA GUARANÁ LATA
+                        </div>
+                        <div class="quantidade">
+                            ~350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 5,59
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Glogg.jfif" alt="">
+                        </div>
+                        <div class="nome">
+                            GLOGG
+                        </div>
+                        <div class="quantidade">
+                            ~350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 12,95
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Heineken 210 ml.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            HEINEKEN 
+                        </div>
+                        <div class="quantidade">
+                            210 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 6,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Heineken 350 ml.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            HEINEKEN 
+                        </div>
+                        <div class="quantidade">
+                            330 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 10,90
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Hidromel Taça.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            HIDROMEL TAÇA 
+                        </div>
+                        <div class="quantidade">
+                            200 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 8,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Irish Coffeee.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            IRISH COFFEE(café irlandês)
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 25,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/LIMONADA.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            LIMONADA
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 8,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/polar bear.jpeg" alt="">
+                        </div>
+                        <div class="nome">
+                            SWEDISH POLAR BEAR
+                        </div>
+                        <div class="quantidade">
+                            500 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 25,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Refil Hidromel.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            REFIL HIDROMEL
+                        </div>
+                        <div class="quantidade">
+                            200 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 5,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/sprite lata.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            SPRITE LATA
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 5,59
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Suco de laranja.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            SUCO DE LARANJA
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 8,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Suco maracujá.jpeg" alt="">
+                        </div>
+                        <div class="nome">
+                            SUCO DE MARACUJÁ
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 8,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/velho bacoffee.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            VELHO BACOFFEE
+                        </div>
+                        <div class="quantidade">
+                            350 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 15,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Água Crystal Com Gás.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            ÁGUA COM GÁS
+                        </div>
+                        <div class="quantidade">
+                            510 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 3,59
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/BEBIDAS/Água Crystal Sem Gás.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            ÁGUA SEM GÁS
+                        </div>
+                        <div class="quantidade">
+                            510 Ml
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 3,50
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="titulo">
+                        SOBREMESAS
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/SOBREMESAS/Kanebullar.jfif" alt="">
+                        </div>
+                        <div class="nome">
+                            KANEBULLAR
+                        </div>
+                        <div class="quantidade">
+                            UND
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 9,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/SOBREMESAS/salada de frutas vermelhas.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            SALADA DE FRUTAS VERMELHAS
+                        </div>
+                        <div class="quantidade">
+                            300g
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 15,59
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                    <div class="prato">
+                        <div class="imagem">
+                            <img src="css/image/PRATOS/SOBREMESAS/torta da princesa.jpg" alt="">
+                        </div>
+                        <div class="nome">
+                            TORTA DA PRINCESA
+                        </div>
+                        <div class="quantidade">
+                            Fatia
+                        </div>
+                        <div class="divisor">
+                            a
+                        </div>
+                        <div class="valor">
+                            R$ 12,99
+                        </div>
+                        <div class="adicionar-comanda">
+                          <i class="far fa-plus-square"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/app.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
