@@ -60,6 +60,9 @@ section:nth-child(even) {
 #whoWeAre {
   height: 100%;
 }
+p {
+  margin: 0 0 0 15px;
+}
 .tittle h1 {
   display: flex;
   justify-content: center;
@@ -107,6 +110,7 @@ section:nth-child(even) {
   max-width: 60vw;
   min-width: 11em;
   padding: 0 15px 0 15px;
+  font-family: "ASKR";
 }
 .text > h1 {
   margin: 15px 0 0 0;
@@ -128,8 +132,19 @@ section:nth-child(even) {
 iframe {
   width: 90vw;
   height: 20em;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 1px solid var(--corSecundaria);
 }
 .endereco {
+  width: var(--width100pcent);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-family: "ASKR";
   font-size: 1.3em;
+}
+.endereco > hr {
+  width: 10%;
+  border: 1px solid var(--corSecundaria);
 }
