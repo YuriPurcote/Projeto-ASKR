@@ -5,6 +5,7 @@
   --corTerciarida: #726551;
 
   --cor1: #6c5435;
+  --cor1B: #382c1b;
   --cor2: #85715a;
   --cor3: #a68560;
   --cor4: #908c7c;
@@ -19,6 +20,7 @@
   font-family: "ASKR";
   src: url(../Fontes/Donau\ Neue_Uppercase.otf);
 }
+
 /* reset pattern */
 * {
   margin: 0;
@@ -28,17 +30,30 @@
 section:nth-child(odd) {
   background-color: var(--corPrincipal);
   color: var(--cor3);
-  height: var(--height100vh);
   min-width: var(--width100pcent);
 }
 section:nth-child(even) {
   background-color: var(--corSecundaria);
   color: var(--cor3);
 }
+/* scroll  */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: var(--cor4);
+}
+body {
+  overflow: overlay;
+}
+
 /* header */
 
 #header {
   width: var(--width100pcent);
+  height: var(--height100vh);
   display: flex;
   align-content: center;
   flex-wrap: wrap;
@@ -59,6 +74,7 @@ section:nth-child(even) {
 /*** WHO WE ARE ***/
 #whoWeAre {
   height: 100%;
+  padding: 0 0 15px 0;
 }
 p {
   margin: 0 0 0 15px;
@@ -75,12 +91,12 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .img-left img {
-  justify-content: center;
   margin: 15px;
-  flex: 2;
+  flex: 1;
   min-width: 15em;
   min-height: 25em;
   padding: 0 20px 20px 20px;
@@ -89,7 +105,6 @@ p {
   border-right: 1px solid var(--cor3);
 }
 .img-right img {
-  justify-content: center;
   margin: 15px;
   flex: 1;
   min-width: 15em;
@@ -100,29 +115,24 @@ p {
   border-bottom: 1px solid var(--cor3);
   border-left: 1px solid var(--cor3);
 }
-@media (max-width: 537px) {
-  .img-right > img {
-    justify-content: flex-start;
-  }
-}
 .text {
   flex: 1;
   max-width: 60vw;
   min-width: 11em;
   padding: 0 15px 0 15px;
   font-family: "ASKR";
+  font-size: 1.25em;
 }
 .text > h1 {
   margin: 15px 0 0 0;
   border-top: 1px solid var(--corPrincipal);
 }
-@media (max-width: 537px) {
-  .body {
-    justify-content: center;
-  }
-}
 
 /* WERE WE ARE */
+#weWeAre {
+  height: 100%;
+  margin: 0 0 15px 0;
+}
 #mapa {
   display: flex;
   flex: 1;
@@ -147,4 +157,108 @@ iframe {
 .endereco > hr {
   width: 10%;
   border: 1px solid var(--corSecundaria);
+}
+/* MENU */
+.subtitulo {
+  width: 10%;
+  transition: 3s;
+}
+.Active {
+  width: 50%;
+  transition: 3s;
+}
+.subtitulo h3 {
+  display: flex;
+  justify-content: center;
+  margin: 0.25em 0 0.25em 0;
+  padding: 0.25em 0 0.25em 0;
+  font-weight: normal;
+  font-size: 1.5em;
+  font-family: "ASKR";
+  border-top: 1px solid var(--cor3);
+  border-bottom: 1px solid var(--cor3);
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 53%);
+  background-color: var(--cor1);
+}
+/* pratos */
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+.item-menu-anima {
+  animation: slide-right;
+}
+.item-menu:nth-child(odd) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: var(--width100pcent);
+}
+.item-menu:nth-child(even) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: var(--width100pcent);
+  background: var(--cor1B);
+}
+.img-menu {
+  justify-content: center;
+  margin: 15px;
+  flex: 1;
+  min-width: 5em;
+  min-height: 6em;
+  max-width: 15vw;
+  max-height: 5vh;
+  padding: 0 20px 20px 20px;
+  border-bottom: 1px solid var(--cor3);
+  border-right: 1px solid var(--cor3);
+}
+.img-menu > img {
+  margin: 0 0 0 5%;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  max-height: 100%;
+}
+.divisor-menu {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  border-top: 1px solid var(--cor1);
+  border-left: 1px solid var(--cor1);
+  transform: rotate(-45deg);
+  height: 25px;
+  width: 25px;
+  color: transparent;
+}
+
+.nome-menu h1 {
+  margin: 10% 0 0 5%;
+  font-family: "ASKR";
+  font-weight: normal;
+}
+.nome-menu h4 {
+  margin: 0 0 0 50%;
+  font-family: "ASKR";
+  font-weight: normal;
+  font-size: 1em;
+}
+.valor-menu {
+  width: 15%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-wrap: nowrap;
+  font-family: "ASKR";
+  font-weight: normal;
+  font-size: 1.3em;
 }
