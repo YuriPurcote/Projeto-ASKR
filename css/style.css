@@ -1,649 +1,254 @@
+/* color var */
 :root {
   --corPrincipal: #3e2400;
   --corSecundaria: #1c1000;
   --corTerciarida: #726551;
 
   --cor1: #6c5435;
+  --cor1B: #382c1b;
   --cor2: #85715a;
   --cor3: #a68560;
   --cor4: #908c7c;
 }
+/* size VAR */
+:root {
+  --height100vh: 100vh;
+  --width100pcent: 100%;
+}
+/* font - style */
 @font-face {
   font-family: "ASKR";
   src: url(../Fontes/Donau\ Neue_Uppercase.otf);
 }
-@font-face {
-  font-family: "font-menu";
-  src: url(../Fontes/MOONRUNE.TTF);
-}
+
+/* reset pattern */
 * {
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
 }
-.principal {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-.col-ghost {
-  z-index: 1;
-  height: 100%;
+/* background color */
+section:nth-child(odd) {
   background-color: var(--corPrincipal);
-  width: 10vh;
-  flex: 0.06;
-  opacity: 39%;
+  color: var(--cor3);
+  min-width: var(--width100pcent);
 }
-.col-menu {
-  z-index: 1;
-  height: 100%;
-  width: 5.7%;
-  background-color: var(--corPrincipal);
-  flex: 0.7;
-  transition: 0.5s;
-  position: fixed;
-  opacity: 85%;
-}
-.col-menu:hover {
-  height: 100vh;
-  width: 10%;
-  flex: 0.2;
-  opacity: 100%;
-
-  transition: 0.5s;
-}
-.col-corpo {
-  flex: 1;
-}
-#capa {
-  display: flex;
-  padding: 0.1%;
-  background-color: var(--corSecundaria);
-  height: 100vh;
-}
-#quem-somos {
-  background: var(--corTerciarida);
-  color: #1c1000;
-  height: 100vh;
-}
-#ondeEstamos {
-  height: 100vh;
-  background: var(--cor4);
-}
-#cardapio {
-  height: 855vh;
-  background: var(--cor2);
-}
-#fechar {
-  padding: 0 0 0 95%;
-}
-.titulo {
-  text-align: center;
-  font-family: "ASKR";
-  font-size: 20vh;
-  line-height: 80%;
-}
-#cardapio > .titulo {
-  font-size: 5vh;
+section:nth-child(even) {
   background-color: var(--corSecundaria);
   color: var(--cor3);
-  padding: 1% 0 1% 0;
 }
-#menu > .titulo {
-  font-size: 5vh;
-  background-color: var(--corSecundaria);
-  color: var(--cor3);
-  margin-top: 1%;
-  margin-bottom: 1%;
-  padding: 1%;
-}
-.legenda {
-  font-family: "ASKR";
-  margin: 0 0 0 25%;
-  font-size: 3.5vh;
-}
-.tituloEmpresa {
-  font-size: 20vh;
-}
-.subtituloEmpresa {
-  font-size: 5vh;
-  padding-left: 10vh;
-}
-/* estrutura ate aqui */
-#logoMenuLateral > img {
-  margin: 10%;
-  width: 80%;
-}
-#logoMenuLateral {
-  background-color: var(--corPrincipal);
-}
-@keyframes quadrado {
-  from {
-    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-  }
-  to {
-    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-  }
-}
-.menu {
-  display: block;
-  text-align: center;
-  margin-top: 3%;
-  background-color: var(--cor1);
-  transition: 0.9s;
-
-  animation: quadrado;
-  animation-duration: 2s;
-
-  font-family: "ASKR";
-  font-size: 2vh;
-  width: 105%;
-  height: 3vh;
-  padding-top: 5%;
-}
-@keyframes ponta {
-  from {
-    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-  }
-}
-.menu:hover {
-  animation: ponta 0.9s forwards;
-  width: 115%;
-  background-color: var(--cor2);
-  transition: 0.9s;
-}
-#colunaMenu {
-  background-color: var(--corPrincipal);
-}
-a {
-  display: block;
-  color: #000;
-  text-decoration: none;
-}
-.icone-capa {
-  width: 50%;
-}
-.icone-capa > img {
-  padding-left: 45%;
-  padding-top: 30%;
-  width: 50%;
-}
-.logo-nome {
-  width: 60%;
-  padding-top: 15%;
-}
-.logo-letters {
-  font-family: "ASKR";
-  color: var(--cor2);
-}
-.bordaLateralInicio {
-  border-left: 5px solid var(--cor2);
-  line-height: 20vh;
-  padding-left: 10%;
-}
-/* QUEM SOMOS */
-#quem-somos-corpo {
-  display: flex;
-}
-#fotoEsquerdaQuemSomos {
-  margin-left: 1%;
-  margin-right: 2%;
-
-  height: 0%;
-  width: 11%;
-
-  padding-right: 5%;
-  padding-bottom: 14%;
-
-  border-right: 5px solid var(--cor2);
-  border-radius: 10px;
-}
-#fotoEsquerdaQuemSomos > img {
-  width: 100%;
-
-  margin-top: 20vh;
-
-  border: 5px solid var(--cor2);
-  border-radius: 0px 50px 0px 50px;
-}
-#fotoDireitaQuemSomos {
-  height: 5%;
-  width: 15%;
-
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-top: 10%;
-
-  border-left: 5px solid var(--cor2);
-  border-radius: 10px;
-
-  padding-left: 5vh;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-}
-#fotoDireitaQuemSomos > img {
-  border: 5px solid var(--cor2);
-  border-radius: 50px 0px 50px 0px;
-  width: 90%;
-}
-#textoQuemSomos {
-  display: flex;
-
-  font-family: "ASKR";
-  font-size: 200%;
-  line-height: 170%;
-
-  margin-top: 10%;
-
-  width: 70%;
-}
-.texto-1 {
-  margin-top: -10%;
-  align-content: left;
-  margin-right: 10%;
-}
-.text-2 {
-  margin-top: 20%;
-  align-content: right;
-}
-/* ONDE ESTAMOS */
-#onde-estamos-corpo {
-  margin-left: 10%;
-}
-#endereco {
-  padding-bottom: 10%;
-  display: flex;
-  flex-direction: row;
-  border-left: solid 2px var(--cor1);
-}
-#foto-mapa {
-  margin-top: 1%;
-  display: block;
-  margin-left: -11%;
-  margin-right: 1%;
-}
-iframe {
-  margin-left: 1%;
-  width: 99%;
-  height: 45vh;
-}
-
-.endereco {
-  margin-top: 2%;
-  margin-bottom: -7%;
-  margin-right: 10vw;
-  color: var(--corPrincipal);
-  font-size: 5vh;
-  width: 100%;
-  font-family: "ASKR";
-}
-/* CARDAPIO */
-.titulo-botao {
-  display: flex;
-}
-.titulo-botao > .titulo {
-  font-family: "ASKR";
-  font-size: 800%;
-  line-height: 80%;
-  display: inline;
-  margin: 0 0 0 40%;
-}
-.titulo-comanda {
-  display: flex;
-  flex: 2;
-}
-#myBtn {
-  display: absolute;
-  z-index: 1;
-  margin: 2.5vh 0 0 25%;
-  background: var(--cor4);
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-}
-#myBtn:active {
-  background: var(--corSecundaria);
-}
-#menu {
-  margin-left: 1vh;
-  margin-right: 1vh;
-}
-.prato:nth-child(odd) {
-  display: flex;
-  height: 26.63vh;
-  background: var(--corPrincipal);
-
-  border: 5px solid var(--cor2);
-}
-.prato:nth-child(even) {
-  display: flex;
-  background: var(--cor2);
-  height: 26.63vh;
-  border-top: 2px solid var(--corSecundaria);
-  border-bottom: 2px solid var(--corSecundaria);
-}
-/* MENU DO CARDAPIO */
-.prato:nth-child(even) > .quantidade,
-.prato:nth-child(even) > .divisor,
-.prato:nth-child(even) > .valor {
-  color: var(--corSecundaria);
-}
-.imagem {
-  width: 20%;
-  height: 60%;
-  justify-content: center;
-  padding: 2% 0 0 2%;
-}
-.imagem > img {
-  width: 100%;
-  height: 100%;
-  margin: 3.3%;
-  border-radius: 0 50px 0 50px;
-  border: 1px solid #6c5435;
-}
-.quantidade {
-  font-family: "ASKR";
-  color: var(--cor3);
-  font-size: 170%;
-  margin-top: 15vh;
-  margin-left: -25vh;
-  min-width: 10%;
-  max-width: 10%;
-}
-.nome {
-  min-width: 35%;
-  max-width: 35%;
-  font-family: "ASKR";
-  margin-top: 5%;
-  margin-left: 10%;
-  color: var(--cor3);
-  font-size: 5vh;
-  height: 10%;
-}
-.prato:nth-child(even) > .nome {
-  min-width: 35%;
-  max-width: 35%;
-  font-family: "ASKR";
-  margin-top: 5%;
-  margin-left: 10%;
-  color: var(--corSecundaria);
-  font-size: 5vh;
-  height: 10%;
-}
-
-.valor {
-  font-family: "ASKR";
-  margin: 5% 0 0 0;
-  color: var(--cor3);
-  font-size: 5vh;
-  height: 10%;
-}
-.divisor {
-  margin: 0 0 0 -10%;
-  font: none;
-  background-color: var(--cor3);
-  width: 25%;
-  opacity: 55%;
-  clip-path: polygon(90% 0, 100% 0%, 70% 100%, 60% 100%);
-}
-.prato:nth-child(even) > .adicionar-comanda {
-  color: var(--corSecundaria);
-}
-.prato:nth-child(even) > .adicionar-comanda:hover {
-  color: var(--corPrincipal);
-}
-.prato:nth-child(odd) > .adicionar-comanda:hover {
-  color: var(--cor1);
-}
-.adicionar-comanda {
-  margin: 6% 5%;
-  color: var(--cor3);
-  font-family: "ASKR";
-  font-size: 180%;
-  display: absolute;
-  z-index: 1;
-}
-.fa-minus-square:hover {
-  color: var(--corSecundaria);
-  cursor: pointer;
-}
-
-.prato:nth-child(even) > .fa-plus-square:hover {
-  color: var(--cor1);
-}
-.prato:nth-child(even) > .fa-plus-square {
-  color: var(--corSecundaria);
-}
-
-/* SCROLL BAR */
+/* scroll  */
 ::-webkit-scrollbar {
-  background: #1c1000;
-  width: 0.2vh;
-  margin-right: 10vh;
-  height: 100vh;
+  background: transparent;
+  width: 2px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #ddd;
   border-radius: 25px;
+  background: var(--cor4);
 }
-/* botao de pausa da musica */
-.fa-pause {
-  background-color: none;
-}
-#pause {
-  background-color: transparent;
-  color: #fff;
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  width: 3.5vh;
-  height: 3.5vh;
-  border: 3px solid #fff;
-  border-radius: 25px;
-  z-index: 1;
-}
-#pause:hover {
-  background-color: #fff;
-  color: #000;
-}
-#myVideo {
-  max-width: 100%;
-  min-height: 100%;
-  position: fixed;
-  z-index: 0;
-  opacity: 10%;
-  object-fit: fill;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-/* botao comanda */
-.botao-comanda > img {
-  padding: 20px;
-  padding-left: 25px;
+body {
+  overflow: overlay;
 }
 
-/* COMANDA-MODAL */
-#comanda {
-  border: 10px solid var(--cor4);
+/* header */
 
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
-  padding: 0 0 0 0; /* Location of the box */
-  left: 5.7%;
-  right: 0;
-  top: 0;
-  width: 93.3%; /* Full width */
-  height: 98%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+#header {
+  width: var(--width100pcent);
+  height: var(--height100vh);
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
 }
-#pedido {
-  border: 10px solid var(--cor4);
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 3; /* Sit on top */
-  padding: 0 0 0 0; /* Location of the box */
-  left: 5.7%;
-  right: 0%;
-  top: 0;
-  width: 93.3%; /* Full width */
-  height: 98%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+#header > img {
+  object-fit: cover;
+  flex: 1 1 250px;
+  transform: scale(0.3, 0.3);
+  transition: 0.5s;
+  width: var(--width100pcent);
 }
-.comanda-corpo {
+@media (max-width: 1000px) {
+  #header > img {
+    transition: 0.5s;
+    transform: scale(0.5, 0.5);
+  }
+}
+/*** WHO WE ARE ***/
+#whoWeAre {
   height: 100%;
-  background: #726551;
+  padding: 0 0 15px 0;
 }
-#fechar-comanda {
-  padding: 0 0 0 99%;
+p {
+  margin: 0 0 0 15px;
 }
-.fa-check-double {
-  margin: 2% 0 2% 99%;
+.tittle h1 {
+  display: flex;
+  justify-content: center;
+  padding: 0.25em 0 0 0;
+  font-weight: normal;
+  font-size: 2.5em;
+  font-family: "ASKR";
+}
+.body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.pedido-titulo {
-  margin: 0 0 0 0;
+.img-left img {
+  margin: 15px;
+  flex: 1;
+  max-width: 15em;
+  max-height: 25em;
+  padding: 0 20px 20px 20px;
+  height: 10vh;
+  border-bottom: 1px solid var(--cor3);
+  border-right: 1px solid var(--cor3);
+}
+.img-right img {
+  margin: 15px;
+  flex: 1;
+  min-width: 15em;
+  min-height: 15em;
+  max-width: 15vw;
+  max-height: 15vh;
+  padding: 0 20px 20px 20px;
+  border-bottom: 1px solid var(--cor3);
+  border-left: 1px solid var(--cor3);
+}
+.text {
+  flex: 1;
+  max-width: 60vw;
+  min-width: 11em;
+  padding: 0 15px 0 15px;
+  font-family: "ASKR";
+  font-size: 1.25em;
+}
+.text > h1 {
+  margin: 15px 0 0 0;
+  border-top: 1px solid var(--corPrincipal);
 }
 
-#pedido > .titulo,
-#comanda > .titulo,
-#pedido-feito > .titulo {
-  font-size: 5vh;
-  background-color: var(--corSecundaria);
-  color: var(--cor3);
-  padding: 1% 5% 0 10%;
-}
-#pedido-feito > .titulo {
-  padding: 5% 0 5% 0;
-}
-#pedido > .titulo {
-  padding: 0 0 0 0;
-}
-.titulo > .subTitulo {
-  font-size: 1.5rem;
-  background-color: var(--corSecundaria);
-  color: var(--cor3);
-  padding: 0 0 0 0;
-}
-#comanda > .titulo > .subTitulo {
-  font-size: 1.5rem;
-  background-color: var(--corSecundaria);
-  color: var(--cor3);
-  padding: 0 0 0 0;
-}
-.corpo-comanda {
-  font-size: 1.5rem;
-  background-color: var(--corSecundaria);
-  color: var(--cor3);
+/* WERE WE ARE */
+#weWeAre {
   height: 100%;
+  margin: 0 0 15px 0;
 }
+#mapa {
+  display: flex;
+  flex: 1;
+  margin: 0 5px 0 15px;
+  justify-content: center;
+}
+iframe {
+  width: 90vw;
+  height: 20em;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 1px solid var(--corSecundaria);
+}
+.endereco {
+  width: var(--width100pcent);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "ASKR";
+  font-size: 1.3em;
+}
+.endereco > hr {
+  width: 10%;
+  border: 1px solid var(--corSecundaria);
+}
+/* MENU */
+.subtitulo {
+  width: 10%;
+  transition: 3s;
+}
+.Active {
+  width: 50%;
+  transition: 5s;
+}
+.subtitulo h3 {
+  display: flex;
+  justify-content: center;
+  margin: 0.25em 0 0.25em 0;
+  padding: 0.25em 0 0.25em 0;
+  font-weight: normal;
+  font-size: 1.5em;
+  font-family: "ASKR";
+  border-top: 1px solid var(--cor3);
+  border-bottom: 1px solid var(--cor3);
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 53%);
+  background-color: var(--cor1);
+}
+/* pratos */
+.item-menu {
+  height: 10em;
+}
+.item-menu:nth-child(odd) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: var(--width100pcent);
+}
+.item-menu:nth-child(even) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: var(--width100pcent);
+  background: var(--cor1B);
+}
+.img-menu {
+  justify-content: center;
+  margin: 15px;
+  flex: 1;
 
-/* The container */
-.container {
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  max-width: 10em;
 
-.container input {
-  position: absolute;
-  z-index: 2;
-  opacity: 0;
-  cursor: pointer;
-}
-.container {
-  margin-left: 5%;
-  margin-bottom: 100px;
-}
+  max-height: 10em;
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding: 0 20px 20px 20px;
+  border-bottom: 1px solid var(--cor3);
+  border-right: 1px solid var(--cor3);
+}
+.img-menu > img {
+  max-width: 10em;
+  max-height: 6.5em;
+}
+.divisor-menu {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  border-top: 1px solid var(--cor1);
+  border-left: 1px solid var(--cor1);
+  transform: rotate(-45deg);
   height: 25px;
   width: 25px;
-  background-color: var(--cor3);
-  border-radius: 50%;
+  color: transparent;
 }
 
-.container:hover input ~ .checkmark {
-  background-color: var(--corTerciarida);
-}
-
-.container input:checked ~ .checkmark {
-  background-color: var(--cor2);
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--corSecundaria);
-}
-.obs,
-h4 {
+.nome-menu h1 {
+  width: 15em;
+  margin: 10% 0% 0 0%;
   font-family: "ASKR";
-  margin-left: 2rem;
+  font-weight: normal;
 }
-.obsBox {
-  margin: 1rem 0 2rem 3.5rem;
-  width: 80%;
-  height: 10rem;
-  border-radius: 15px 15px 15px 15px;
-}
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.fa-align-justify {
-  font-size: 50px;
-  transition: 0.9s;
-}
-.fa-align-justify:hover {
-  transition: 0.9s;
-  font-size: 50px;
-  color: #ddd;
-}
-hr {
-  margin: 15px 0 15px 0;
-}
-#close {
-  display: absolute;
-  z-index: 2;
-  margin: 0 0 0 75%;
-  cursor: pointer;
-}
-#close:hover {
-  color: var(--corTerciarida);
-}
-.botao-comanda > .fa-time {
+.nome-menu h4 {
   margin: 0 0 0 50%;
+  font-family: "ASKR";
+  font-weight: normal;
+  font-size: 1em;
 }
-#pedido-feito {
-  display: none;
+.valor-menu {
+  width: 15%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-wrap: nowrap;
+  font-family: "ASKR";
+  font-weight: normal;
+  font-size: 1.3em;
 }
