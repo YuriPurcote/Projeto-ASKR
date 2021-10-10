@@ -1,677 +1,649 @@
-:root{
-    --corPrincipal:#3e2400;
-    --corSecundaria:#1C1000;
-    --corTerciarida:#726551;
+:root {
+  --corPrincipal: #3e2400;
+  --corSecundaria: #1c1000;
+  --corTerciarida: #726551;
 
-    --cor1:#6c5435;
-    --cor2:#85715a;
-    --cor3:#A68560;
-    --cor4:#908c7c;
-
+  --cor1: #6c5435;
+  --cor2: #85715a;
+  --cor3: #a68560;
+  --cor4: #908c7c;
 }
 @font-face {
-    font-family: 'ASKR';
-    src: url(../Fontes/Donau\ Neue_Uppercase.otf);
+  font-family: "ASKR";
+  src: url(../Fontes/Donau\ Neue_Uppercase.otf);
 }
 @font-face {
-    font-family: 'font-menu';
-    src: url(../Fontes/MOONRUNE.TTF);
+  font-family: "font-menu";
+  src: url(../Fontes/MOONRUNE.TTF);
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
-.principal{
-    width: 100%;
-    height: 100%;
-    display: flex;
+.principal {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
-.col-ghost{
-    z-index: 1;
-    height:100%;
-    background-color:var(--corPrincipal) ;
-    width: 10vh;
-    flex: 0.06;
-    opacity: 39%;
+.col-ghost {
+  z-index: 1;
+  height: 100%;
+  background-color: var(--corPrincipal);
+  width: 10vh;
+  flex: 0.06;
+  opacity: 39%;
 }
-.col-menu{
-    z-index: 1;
-    height:100%;
-    width: 5.7%;
-    background-color:var(--corPrincipal) ;
-    flex: 0.7;
-    transition: 0.5s;
-    position: fixed;
-    opacity: 85%;
+.col-menu {
+  z-index: 1;
+  height: 100%;
+  width: 5.7%;
+  background-color: var(--corPrincipal);
+  flex: 0.7;
+  transition: 0.5s;
+  position: fixed;
+  opacity: 85%;
 }
-.col-menu:hover{
-    height:100vh;
-    width: 10%;
-    flex: 0.2;
-    opacity: 100%;
+.col-menu:hover {
+  height: 100vh;
+  width: 10%;
+  flex: 0.2;
+  opacity: 100%;
 
-    transition: 0.5s;
+  transition: 0.5s;
 }
-.col-corpo{
-    flex: 1;
-    
+.col-corpo {
+  flex: 1;
 }
-#capa{
-    
-    display: flex;
-    padding: 0.1%;
-    background-color: var(--corSecundaria);
-    height: 100vh;
-
+#capa {
+  display: flex;
+  padding: 0.1%;
+  background-color: var(--corSecundaria);
+  height: 100vh;
 }
-#quem-somos{
-    background: var(--corTerciarida);
-    color:#1C1000;
-    height: 100vh;
+#quem-somos {
+  background: var(--corTerciarida);
+  color: #1c1000;
+  height: 100vh;
 }
-#ondeEstamos{
-    height: 100vh;
-    background:var(--cor4);
-    
+#ondeEstamos {
+  height: 100vh;
+  background: var(--cor4);
 }
-#cardapio{
-    height: 855vh;
-    background:var(--cor2);
+#cardapio {
+  height: 855vh;
+  background: var(--cor2);
 }
-#fechar{
-    padding: 0 0 0 95% ;
+#fechar {
+  padding: 0 0 0 95%;
 }
-.titulo{
-    text-align: center;
-    font-family: 'ASKR';
-    font-size: 20vh;
-    line-height: 80%;
-
+.titulo {
+  text-align: center;
+  font-family: "ASKR";
+  font-size: 20vh;
+  line-height: 80%;
 }
-#cardapio>.titulo{
-    font-size: 5vh;
-    background-color: var(--corSecundaria);
-    color: var(--cor3);
-    padding: 1% 0 1% 0;
+#cardapio > .titulo {
+  font-size: 5vh;
+  background-color: var(--corSecundaria);
+  color: var(--cor3);
+  padding: 1% 0 1% 0;
 }
-#menu>.titulo{
-    font-size: 5vh;
-    background-color: var(--corSecundaria);
-    color: var(--cor3);
-    margin-top: 1%;
-    margin-bottom: 1%;
-    padding: 1%;
+#menu > .titulo {
+  font-size: 5vh;
+  background-color: var(--corSecundaria);
+  color: var(--cor3);
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1%;
 }
-.legenda{
-    font-family: 'ASKR';
-    margin:0 0 0 25%;
-    font-size: 3.5vh;
+.legenda {
+  font-family: "ASKR";
+  margin: 0 0 0 25%;
+  font-size: 3.5vh;
 }
-.tituloEmpresa{
-    font-size: 20vh;
+.tituloEmpresa {
+  font-size: 20vh;
 }
-.subtituloEmpresa{
-    font-size: 5vh;
-    padding-left: 10vh;
+.subtituloEmpresa {
+  font-size: 5vh;
+  padding-left: 10vh;
 }
 /* estrutura ate aqui */
-#logoMenuLateral>img{
-    margin: 10%;
-    width: 80%;
-
+#logoMenuLateral > img {
+  margin: 10%;
+  width: 80%;
 }
-#logoMenuLateral{
-    background-color: var(--corPrincipal) ;
+#logoMenuLateral {
+  background-color: var(--corPrincipal);
 }
 @keyframes quadrado {
-    from {
-        clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-    }
-    to{
-        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-    }
-    
+  from {
+    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  }
 }
-.menu{
-    display: block;
-    text-align: center;
-    margin-top: 3%;
-    background-color:var(--cor1);
-    transition: 0.9s;
+.menu {
+  display: block;
+  text-align: center;
+  margin-top: 3%;
+  background-color: var(--cor1);
+  transition: 0.9s;
 
-    animation: quadrado;
-    animation-duration: 2s;
+  animation: quadrado;
+  animation-duration: 2s;
 
-    font-family: 'ASKR' ;
-    font-size: 2vh;
-    width: 105%;
-    height: 3vh;
-    padding-top: 5%;
-    
+  font-family: "ASKR";
+  font-size: 2vh;
+  width: 105%;
+  height: 3vh;
+  padding-top: 5%;
 }
 @keyframes ponta {
-    from {
-        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-    }
-    to{
-        clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-    }
-    
+  from {
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+  }
 }
-.menu:hover{
-    animation: ponta 0.9s forwards;
-    width: 115%;
-    background-color: var(--cor2);
-    transition: 0.9s;
+.menu:hover {
+  animation: ponta 0.9s forwards;
+  width: 115%;
+  background-color: var(--cor2);
+  transition: 0.9s;
 }
-#colunaMenu{
-    background-color: var(--corPrincipal) ;
+#colunaMenu {
+  background-color: var(--corPrincipal);
 }
-a{
-    display: block;
-    color: #000;
-    text-decoration: none;
-} 
-.icone-capa{
-    width: 50%;
+a {
+  display: block;
+  color: #000;
+  text-decoration: none;
 }
-.icone-capa>img{
-    
-    padding-left:45%;
-    padding-top: 30%;
-    width: 50%;
+.icone-capa {
+  width: 50%;
 }
-.logo-nome{
-    width: 60%;
-    padding-top: 15%;
-
+.icone-capa > img {
+  padding-left: 45%;
+  padding-top: 30%;
+  width: 50%;
 }
-.logo-letters{
-    font-family: 'ASKR';
-    color: var(--cor2);
-    
-}   
-.bordaLateralInicio{
-    border-left: 5px solid var(--cor2);
-    line-height:20vh;
-    padding-left: 10%;
-
-
+.logo-nome {
+  width: 60%;
+  padding-top: 15%;
+}
+.logo-letters {
+  font-family: "ASKR";
+  color: var(--cor2);
+}
+.bordaLateralInicio {
+  border-left: 5px solid var(--cor2);
+  line-height: 20vh;
+  padding-left: 10%;
 }
 /* QUEM SOMOS */
-#quem-somos-corpo{
-    display: flex;
+#quem-somos-corpo {
+  display: flex;
 }
-#fotoEsquerdaQuemSomos{
-    margin-left: 1%;
-    margin-right: 2%;
+#fotoEsquerdaQuemSomos {
+  margin-left: 1%;
+  margin-right: 2%;
 
-    height: 0%;
-    width: 11%;
+  height: 0%;
+  width: 11%;
 
-    padding-right: 5%;
-    padding-bottom: 14%;
+  padding-right: 5%;
+  padding-bottom: 14%;
 
-    border-right: 5px solid var(--cor2);
-    border-radius: 10px;
-
+  border-right: 5px solid var(--cor2);
+  border-radius: 10px;
 }
-#fotoEsquerdaQuemSomos>img{
-    width: 100%;
+#fotoEsquerdaQuemSomos > img {
+  width: 100%;
 
-    margin-top: 20vh;
+  margin-top: 20vh;
 
-    border: 5px solid var(--cor2);
-    border-radius:  0px 50px 0px 50px;
-
+  border: 5px solid var(--cor2);
+  border-radius: 0px 50px 0px 50px;
 }
-#fotoDireitaQuemSomos{
-    
-    height: 5%;
-    width: 15%;
-    
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top:10% ;
+#fotoDireitaQuemSomos {
+  height: 5%;
+  width: 15%;
 
-    border-left: 5px solid var(--cor2);
-    border-radius: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 10%;
 
-    padding-left: 5vh;
-    padding-top: 10vh;
-    padding-bottom:10vh ;
+  border-left: 5px solid var(--cor2);
+  border-radius: 10px;
+
+  padding-left: 5vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
-#fotoDireitaQuemSomos>img{
-    border: 5px solid var(--cor2);
-    border-radius: 50px 0px 50px 0px ;
-    width: 90%;
-
+#fotoDireitaQuemSomos > img {
+  border: 5px solid var(--cor2);
+  border-radius: 50px 0px 50px 0px;
+  width: 90%;
 }
-#textoQuemSomos{
-    display: flex; 
+#textoQuemSomos {
+  display: flex;
 
-    font-family: 'ASKR';
-    font-size: 200%;
-    line-height: 170%;
+  font-family: "ASKR";
+  font-size: 200%;
+  line-height: 170%;
 
-    margin-top: 10%;
+  margin-top: 10%;
 
-    width: 70%;
+  width: 70%;
 }
-.texto-1{
-    margin-top:-10%;
-    align-content: left;
-    margin-right: 10% ;
+.texto-1 {
+  margin-top: -10%;
+  align-content: left;
+  margin-right: 10%;
 }
-.text-2{
-    margin-top: 20%;
-    align-content: right;
+.text-2 {
+  margin-top: 20%;
+  align-content: right;
 }
 /* ONDE ESTAMOS */
-#onde-estamos-corpo{
-    margin-left: 10%;
+#onde-estamos-corpo {
+  margin-left: 10%;
 }
-#endereco{
-    padding-bottom: 10%;
-    display: flex;
-    flex-direction: row;
-    border-left: solid 2px var(--cor1);
+#endereco {
+  padding-bottom: 10%;
+  display: flex;
+  flex-direction: row;
+  border-left: solid 2px var(--cor1);
 }
-#foto-mapa{
-    margin-top: 1%;
-    display: block;
-    margin-left: -11%;
-    margin-right: 1%;
+#foto-mapa {
+  margin-top: 1%;
+  display: block;
+  margin-left: -11%;
+  margin-right: 1%;
 }
-iframe{
-    margin-left: 1%;
-    width: 99%;
-    height: 45vh;
+iframe {
+  margin-left: 1%;
+  width: 99%;
+  height: 45vh;
 }
 
-.endereco{
-    margin-top: 2%;
-    margin-bottom: -7%;
-    margin-right: 10vw;
-    color: var(--corPrincipal);
-    font-size:5vh;
-    width: 100%;
-    font-family: 'ASKR';
+.endereco {
+  margin-top: 2%;
+  margin-bottom: -7%;
+  margin-right: 10vw;
+  color: var(--corPrincipal);
+  font-size: 5vh;
+  width: 100%;
+  font-family: "ASKR";
 }
 /* CARDAPIO */
-.titulo-botao{
-    display: flex;
+.titulo-botao {
+  display: flex;
+}
+.titulo-botao > .titulo {
+  font-family: "ASKR";
+  font-size: 800%;
+  line-height: 80%;
+  display: inline;
+  margin: 0 0 0 40%;
+}
+.titulo-comanda {
+  display: flex;
+  flex: 2;
+}
+#myBtn {
+  display: absolute;
+  z-index: 1;
+  margin: 2.5vh 0 0 25%;
+  background: var(--cor4);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+#myBtn:active {
+  background: var(--corSecundaria);
+}
+#menu {
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+.prato:nth-child(odd) {
+  display: flex;
+  height: 26.63vh;
+  background: var(--corPrincipal);
 
+  border: 5px solid var(--cor2);
 }
-.titulo-botao>.titulo{
-    font-family: 'ASKR';
-    font-size: 800%;
-    line-height: 80%;
-    display: inline;
-    margin: 0 0 0 40%;
-}
-.titulo-comanda{
-    display: flex;
-    flex: 2;
-}
-#myBtn{
-    display: absolute;
-    z-index: 1;
-    margin: 2.5vh 0 0 25%;
-    background: var(--cor4);
-    border-radius: 50%;
-    width: 90px;
-    height: 90px;
-}
-#myBtn:active{
-    background: var(--corSecundaria);
-}
-#menu{
-    margin-left: 1vh;
-    margin-right: 1vh;
-
-}
-.prato:nth-child(odd){
-    display: flex;
-    height: 26.63vh;
-    background: var(--corPrincipal);
-
-    border: 5px solid var(--cor2);
-}
-.prato:nth-child(even){
-    display: flex;
-    background: var(--cor2);
-    height: 26.63vh;
-    border-top: 2px solid var(--corSecundaria);
-    border-bottom: 2px solid var(--corSecundaria);
+.prato:nth-child(even) {
+  display: flex;
+  background: var(--cor2);
+  height: 26.63vh;
+  border-top: 2px solid var(--corSecundaria);
+  border-bottom: 2px solid var(--corSecundaria);
 }
 /* MENU DO CARDAPIO */
-.prato:nth-child(even)>.quantidade,.prato:nth-child(even)>.divisor,.prato:nth-child(even)>.valor{
-    color: var(--corSecundaria);
+.prato:nth-child(even) > .quantidade,
+.prato:nth-child(even) > .divisor,
+.prato:nth-child(even) > .valor {
+  color: var(--corSecundaria);
 }
-.imagem{
-    width: 20%;
-    height: 60%;
-    justify-content: center;
-    padding: 2% 0 0 2%;
-    
+.imagem {
+  width: 20%;
+  height: 60%;
+  justify-content: center;
+  padding: 2% 0 0 2%;
 }
-.imagem>img{
-    width: 100% ;
-    height: 100%;
-    margin: 3.3%;
-    border-radius: 0 50px 0 50px  ;
-    border: 1px solid #6c5435;
+.imagem > img {
+  width: 100%;
+  height: 100%;
+  margin: 3.3%;
+  border-radius: 0 50px 0 50px;
+  border: 1px solid #6c5435;
 }
-.quantidade{
-    font-family: 'ASKR';
-    color: var(--cor3);
-    font-size:170%;
-    margin-top: 15vh;
-    margin-left: -25vh;
-    min-width: 10%;
-    max-width: 10%;
+.quantidade {
+  font-family: "ASKR";
+  color: var(--cor3);
+  font-size: 170%;
+  margin-top: 15vh;
+  margin-left: -25vh;
+  min-width: 10%;
+  max-width: 10%;
 }
-.nome{
-    min-width: 35%;
-    max-width: 35%;
-    font-family: 'ASKR';
-    margin-top: 5%;
-    margin-left: 10%;
-    color: var(--cor3);
-    font-size:5vh;
-    height: 10%;
+.nome {
+  min-width: 35%;
+  max-width: 35%;
+  font-family: "ASKR";
+  margin-top: 5%;
+  margin-left: 10%;
+  color: var(--cor3);
+  font-size: 5vh;
+  height: 10%;
 }
-.prato:nth-child(even)>.nome{
-    min-width: 35%;
-    max-width: 35%;
-    font-family: 'ASKR';
-    margin-top: 5%;
-    margin-left: 10%;
-    color: var(--corSecundaria);
-    font-size:5vh;
-    height: 10%;
-}
-
-.valor{
-    font-family: 'ASKR';
-    margin: 5% 0 0 0;
-    color: var(--cor3);
-    font-size:5vh;
-    height: 10%;
-}
-.divisor{
-    margin:0 0 0 -10%;
-    font: none;
-    background-color: var(--cor3);
-    width: 25%;
-    opacity: 55%;
-    clip-path: polygon(90% 0, 100% 0%, 70% 100%, 60% 100%);
-}
-.prato:nth-child(even)>.adicionar-comanda{
-    color: var(--corSecundaria);
-
-}
-.prato:nth-child(even)>.adicionar-comanda:hover{
-    color: var(--corPrincipal);
-
-}
-.prato:nth-child(odd)>.adicionar-comanda:hover{
-    color: var(--cor1);
-
-}
-.adicionar-comanda{
-    margin:6% 5%;
-    color: var(--cor3);
-    font-family: 'ASKR';
-    font-size: 180%;
-    display: absolute;
-    z-index: 1;
-}
-.fa-minus-square:hover{
-    color: var(--corSecundaria);
-    cursor: pointer;
+.prato:nth-child(even) > .nome {
+  min-width: 35%;
+  max-width: 35%;
+  font-family: "ASKR";
+  margin-top: 5%;
+  margin-left: 10%;
+  color: var(--corSecundaria);
+  font-size: 5vh;
+  height: 10%;
 }
 
-.prato:nth-child(even)>.fa-plus-square:hover{
-    color: var(--cor1);
+.valor {
+  font-family: "ASKR";
+  margin: 5% 0 0 0;
+  color: var(--cor3);
+  font-size: 5vh;
+  height: 10%;
 }
-.prato:nth-child(even)>.fa-plus-square{
-    color: var(--corSecundaria);
+.divisor {
+  margin: 0 0 0 -10%;
+  font: none;
+  background-color: var(--cor3);
+  width: 25%;
+  opacity: 55%;
+  clip-path: polygon(90% 0, 100% 0%, 70% 100%, 60% 100%);
+}
+.prato:nth-child(even) > .adicionar-comanda {
+  color: var(--corSecundaria);
+}
+.prato:nth-child(even) > .adicionar-comanda:hover {
+  color: var(--corPrincipal);
+}
+.prato:nth-child(odd) > .adicionar-comanda:hover {
+  color: var(--cor1);
+}
+.adicionar-comanda {
+  margin: 6% 5%;
+  color: var(--cor3);
+  font-family: "ASKR";
+  font-size: 180%;
+  display: absolute;
+  z-index: 1;
+}
+.fa-minus-square:hover {
+  color: var(--corSecundaria);
+  cursor: pointer;
 }
 
+.prato:nth-child(even) > .fa-plus-square:hover {
+  color: var(--cor1);
+}
+.prato:nth-child(even) > .fa-plus-square {
+  color: var(--corSecundaria);
+}
 
 /* SCROLL BAR */
-::-webkit-scrollbar{
-    background: #1C1000 ;
-    width: 0.2vh;
-    margin-right: 10vh;
-    height: 100vh;
+::-webkit-scrollbar {
+  background: #1c1000;
+  width: 0.2vh;
+  margin-right: 10vh;
+  height: 100vh;
 }
-::-webkit-scrollbar-thumb{
-    background-color: #DDD ;
-    border-radius: 25px;
-
+::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 25px;
 }
 /* botao de pausa da musica */
-.fa-pause{
-    background-color: none;
-
+.fa-pause {
+  background-color: none;
 }
-#pause{
-    background-color: transparent;
-    color: #fff;
-    position: fixed;
-    bottom: 2%;
-    right: 2%;
-    width: 3.5vh;
-    height: 3.5vh;
-    border: 3px solid #fff;
-    border-radius: 25px;
-    z-index: 1;
+#pause {
+  background-color: transparent;
+  color: #fff;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  width: 3.5vh;
+  height: 3.5vh;
+  border: 3px solid #fff;
+  border-radius: 25px;
+  z-index: 1;
 }
-#pause:hover{
-    background-color: #fff;
-    color: #000;
+#pause:hover {
+  background-color: #fff;
+  color: #000;
 }
-#myVideo{
-    max-width: 100%;
-    min-height: 100%;
-    position: fixed;
-    z-index: 0;
-    opacity: 10%;
-    object-fit: fill;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    
+#myVideo {
+  max-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  z-index: 0;
+  opacity: 10%;
+  object-fit: fill;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 /* botao comanda */
-.botao-comanda>img{
-    padding: 20px;
-    padding-left: 25px;
+.botao-comanda > img {
+  padding: 20px;
+  padding-left: 25px;
 }
-
 
 /* COMANDA-MODAL */
-#comanda{
-    border:  10px solid var(--cor4);
+#comanda {
+  border: 10px solid var(--cor4);
 
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    padding: 0 0 0 0 ; /* Location of the box */
-    left: 5.7%;
-    right: 0;
-    top: 0;
-    width: 93.3%; /* Full width */
-    height: 98%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding: 0 0 0 0; /* Location of the box */
+  left: 5.7%;
+  right: 0;
+  top: 0;
+  width: 93.3%; /* Full width */
+  height: 98%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
 }
-#pedido{
-    border:  10px solid var(--cor4);
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 3; /* Sit on top */
-    padding: 0 0 0 0 ; /* Location of the box */
-    left: 5.7%;
-    right: 0%;
-    top: 0;
-    width: 93.3%; /* Full width */
-    height: 98%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-
+#pedido {
+  border: 10px solid var(--cor4);
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding: 0 0 0 0; /* Location of the box */
+  left: 5.7%;
+  right: 0%;
+  top: 0;
+  width: 93.3%; /* Full width */
+  height: 98%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
 }
-.comanda-corpo{
-    height: 100%;
-    background: #726551;
-
+.comanda-corpo {
+  height: 100%;
+  background: #726551;
 }
-#fechar-comanda{
-    padding:0 0 0 99%;
+#fechar-comanda {
+  padding: 0 0 0 99%;
 }
-.fa-check-double{
-    margin: 2% 0 2% 99%;
-
+.fa-check-double {
+  margin: 2% 0 2% 99%;
 }
 
-.pedido-titulo{
-    margin:0 0 0 0;
+.pedido-titulo {
+  margin: 0 0 0 0;
 }
 
-#pedido>.titulo,#comanda>.titulo,#pedido-feito>.titulo{
-    font-size: 5vh;
-    background-color: var(--corSecundaria);
-    color: var(--cor3);
-    padding: 1% 5% 0 10%;
+#pedido > .titulo,
+#comanda > .titulo,
+#pedido-feito > .titulo {
+  font-size: 5vh;
+  background-color: var(--corSecundaria);
+  color: var(--cor3);
+  padding: 1% 5% 0 10%;
 }
-#pedido-feito>.titulo{
-    padding: 5% 0  5% 0;
-
+#pedido-feito > .titulo {
+  padding: 5% 0 5% 0;
 }
-#pedido>.titulo{
-    padding: 0 0 0 0;
+#pedido > .titulo {
+  padding: 0 0 0 0;
 }
-.titulo>.subTitulo{
-    font-size: 1.5rem;
-    background-color: var(--corSecundaria);
-    color: var(--cor3);
-    padding: 0 0 0 0;
+.titulo > .subTitulo {
+  font-size: 1.5rem;
+  background-color: var(--corSecundaria);
+  color: var(--cor3);
+  padding: 0 0 0 0;
 }
-#comanda>.titulo>.subTitulo{
-    font-size: 1.5rem;
-    background-color: var(--corSecundaria);
-    color: var(--cor3);
-    padding: 0 0 0 0;
+#comanda > .titulo > .subTitulo {
+  font-size: 1.5rem;
+  background-color: var(--corSecundaria);
+  color: var(--cor3);
+  padding: 0 0 0 0;
 }
-.corpo-comanda{
-    font-size: 1.5rem;
-    background-color: var(--corSecundaria);
-    color: var(--cor3);
-    height:100%;
+.corpo-comanda {
+  font-size: 1.5rem;
+  background-color: var(--corSecundaria);
+  color: var(--cor3);
+  height: 100%;
 }
 
 /* The container */
 .container {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  .container input {
-    position: absolute;
-    z-index: 2;
-    opacity: 0;
-    cursor: pointer;
-  }
-  .container{
-      margin-left: 5%;
-      margin-bottom: 100px;
-  }
-  
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: var(--cor3);
-    border-radius: 50%;
-  }
-  
-  .container:hover input ~ .checkmark {
-    background-color: var(--corTerciarida);
-  }
-  
-  .container input:checked ~ .checkmark {
-    background-color: var(--cor2);
-  }
-  
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  .container .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--corSecundaria);
-  }
-  .obs,h4{
-      font-family: 'ASKR';
-      margin-left: 2rem;
-  }
-  .obsBox{
-      margin: 1rem 0 2rem 3.5rem;
-      width: 80%;
-      height:10rem;
-      border-radius:  15px 15px 15px 15px;
-  }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .fa-align-justify {
-      font-size: 50px;
-      transition: .9s;
-  }
-  .fa-align-justify:hover {
-      transition: .9s;
-      font-size: 50px;
-      color: #DDD;
-  }
-  hr{
-      margin: 15px 0 15px 0;
-  }
-  #close{
-    display: absolute;
-    z-index: 2;
-    margin: 0 0 0 75%;
-    cursor: pointer;
-  }
-  #close:hover{
-      color: var(--corTerciarida);
-  }
-  .botao-comanda>.fa-time{
-      margin: 0 0 0 50%;
-  }
-  #pedido-feito{
-      display: none;
-  }
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.container {
+  margin-left: 5%;
+  margin-bottom: 100px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--cor3);
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: var(--corTerciarida);
+}
+
+.container input:checked ~ .checkmark {
+  background-color: var(--cor2);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--corSecundaria);
+}
+.obs,
+h4 {
+  font-family: "ASKR";
+  margin-left: 2rem;
+}
+.obsBox {
+  margin: 1rem 0 2rem 3.5rem;
+  width: 80%;
+  height: 10rem;
+  border-radius: 15px 15px 15px 15px;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.fa-align-justify {
+  font-size: 50px;
+  transition: 0.9s;
+}
+.fa-align-justify:hover {
+  transition: 0.9s;
+  font-size: 50px;
+  color: #ddd;
+}
+hr {
+  margin: 15px 0 15px 0;
+}
+#close {
+  display: absolute;
+  z-index: 2;
+  margin: 0 0 0 75%;
+  cursor: pointer;
+}
+#close:hover {
+  color: var(--corTerciarida);
+}
+.botao-comanda > .fa-time {
+  margin: 0 0 0 50%;
+}
+#pedido-feito {
+  display: none;
+}
