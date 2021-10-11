@@ -99,6 +99,7 @@ p {
   flex: 1;
   max-width: 15em;
   max-height: 25em;
+  min-height: 25em;
   padding: 0 20px 20px 20px;
   height: 10vh;
   border-bottom: 1px solid var(--cor3);
@@ -180,35 +181,34 @@ iframe {
   clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 53%);
   background-color: var(--cor1);
 }
+#bebidas {
+  border-top: 1px solid var(--cor1);
+  border-bottom: 1px solid var(--cor1);
+}
 /* pratos */
 .item-menu {
-  height: 10em;
-}
-.item-menu:nth-child(odd) {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+
   width: var(--width100pcent);
+  height: var(--height100pcent);
+
+  padding: 10px;
 }
 .item-menu:nth-child(even) {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: var(--width100pcent);
   background: var(--cor1B);
 }
 .img-menu {
   justify-content: center;
   margin: 15px;
-  flex: 1;
 
   max-width: 10em;
-
   max-height: 10em;
+  min-width: 1em;
+  min-height: 1em;
 
   padding: 0 20px 20px 20px;
   border-bottom: 1px solid var(--cor3);
@@ -216,39 +216,48 @@ iframe {
 }
 .img-menu > img {
   max-width: 10em;
+  min-width: 10em;
   max-height: 6.5em;
-}
-.divisor-menu {
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  border-top: 1px solid var(--cor1);
-  border-left: 1px solid var(--cor1);
-  transform: rotate(-45deg);
-  height: 25px;
-  width: 25px;
-  color: transparent;
+  min-height: 6.5em;
 }
 
 .nome-menu h1 {
-  width: 15em;
-  margin: 10% 0% 0 0%;
+  width: 10em;
+  padding-right: 10px;
   font-family: "ASKR";
   font-weight: normal;
 }
 .nome-menu h4 {
-  margin: 0 0 0 50%;
   font-family: "ASKR";
   font-weight: normal;
   font-size: 1em;
 }
 .valor-menu {
-  width: 15%;
+  width: 3em;
   display: flex;
   justify-self: center;
   align-self: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   font-family: "ASKR";
   font-weight: normal;
-  font-size: 1.3em;
+  font-size: 1em;
+  padding: 0.3em;
+  border-left: 1px solid var(--cor1);
+  border-right: 1px solid var(--cor1);
+}
+.far {
+  font-size: 2em;
+  margin: 20px;
+}
+@media (max-width: 425px) {
+  .nome-menu h1 {
+    min-width: 5em;
+    margin: 1em;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+  .nome-menu h4 {
+    margin: 0 0 0 14em;
+  }
 }
