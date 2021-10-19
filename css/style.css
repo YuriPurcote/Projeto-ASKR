@@ -23,6 +23,7 @@
 
 /* reset pattern */
 * {
+  font-family: "ASKR";
   margin: 0;
   padding: 0;
 }
@@ -195,8 +196,6 @@ iframe {
 
   width: var(--width100pcent);
   height: var(--height100pcent);
-
-  padding: 10px;
 }
 .item-menu:nth-child(even) {
   background: var(--cor1B);
@@ -205,7 +204,7 @@ iframe {
   justify-content: center;
   margin: 15px;
 
-  max-width: 10em;
+  max-width: 100%;
   max-height: 10em;
   min-width: 1em;
   min-height: 1em;
@@ -223,8 +222,7 @@ iframe {
 
 .nome-menu h1 {
   width: 10em;
-  padding-right: 10px;
-  font-family: "ASKR";
+  padding: 10px;
   font-weight: normal;
 }
 .nome-menu h4 {
@@ -233,17 +231,21 @@ iframe {
   font-size: 1em;
 }
 .valor-menu {
-  width: 3em;
+  width: 4em;
+  height: 2em;
   display: flex;
   justify-self: center;
-  align-self: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
   font-family: "ASKR";
   font-weight: normal;
   font-size: 1em;
-  padding: 0.3em;
-  border-left: 1px solid var(--cor1);
-  border-right: 1px solid var(--cor1);
+  padding: 0 1em 0 1em;
+  border-left: 2px solid var(--cor1);
+  border-right: 2px solid var(--cor1);
+}
+.valor-menu > h1 {
+  margin: 0 0 0 5\px;
 }
 .far {
   font-size: 2em;
